@@ -9,6 +9,118 @@
   --utp-readable-border: rgba(255, 255, 255, 0.22);
   --utp-readable-surface: rgba(0, 0, 0, 0.32);
   --utp-readable-surface-strong: rgba(0, 0, 0, 0.48);
+  --utp-readable-surface-solid: #1f2328;
+}
+
+body,
+#template,
+#menu,
+#content,
+.content,
+.tab,
+.Panel,
+.panel,
+.dashboard,
+.dash,
+.tile,
+.card,
+table,
+tbody,
+td,
+th,
+tr,
+dt,
+dd,
+p,
+span,
+label {
+  color: var(--text) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+legend,
+caption,
+thead,
+thead td,
+thead th,
+.title,
+.PanelTitle,
+.panel-title,
+.tile-title,
+.card-title,
+.section-title {
+  color: var(--text-hover) !important;
+}
+
+small,
+.small,
+.note,
+.description,
+.help,
+.hint,
+.muted {
+  color: var(--text-muted) !important;
+}
+
+table,
+table.dashboard,
+table.share_status,
+table.disk_status,
+table.tablesorter,
+.Panel,
+.panel,
+.dashboard,
+.dash,
+.tile,
+.card,
+.plugin,
+.info,
+.status,
+.warning,
+.notice {
+  background-color: var(--utp-readable-surface) !important;
+  border-color: var(--utp-readable-border) !important;
+}
+
+table tr,
+table td,
+table th,
+.PanelHeader,
+.panel-heading,
+.panel-header,
+.tile-header,
+.card-header {
+  border-color: var(--utp-readable-border) !important;
+}
+
+table tr:nth-child(even),
+table.tablesorter tbody tr:nth-child(even),
+table.share_status tbody tr:nth-child(even),
+table.disk_status tbody tr:nth-child(even) {
+  background-color: var(--utp-readable-surface) !important;
+}
+
+table tr:nth-child(odd),
+table.tablesorter tbody tr:nth-child(odd),
+table.share_status tbody tr:nth-child(odd),
+table.disk_status tbody tr:nth-child(odd) {
+  background-color: var(--utp-readable-surface-strong) !important;
+}
+
+a,
+a:visited,
+.blue-text {
+  color: var(--link-color) !important;
+}
+
+a:hover,
+a:focus {
+  color: var(--link-color-hover) !important;
 }
 
 input,
