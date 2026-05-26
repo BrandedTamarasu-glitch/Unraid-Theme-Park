@@ -1,0 +1,4 @@
+#!/bin/bash
+set -euo pipefail
+
+php -r 'require "/usr/local/emhttp/plugins/unraid.theme.park/include/ThemePark.php"; exit(utp_generate_css() ? 0 : 1);'

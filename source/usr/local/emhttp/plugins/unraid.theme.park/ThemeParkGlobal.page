@@ -1,0 +1,9 @@
+Menu='Buttons'
+Link='unraid-theme-park-hook'
+---
+<?php
+/* Global stylesheet hook.
+ * The page intentionally renders no controls. Unraid includes
+ * sheets/ThemeParkGlobal.css for all Menu=Buttons pages.
+ */
+?>

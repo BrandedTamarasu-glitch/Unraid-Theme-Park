@@ -1,0 +1,18 @@
+/* Phase 0 proof only. Replace with generated active theme CSS after validation. */
+:root {
+  --utp-phase0-outline: #21b8ff;
+}
+
+body::before {
+  content: "Unraid Theme Park Phase 0";
+  position: fixed;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  z-index: 99999;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid var(--utp-phase0-outline);
+  background: rgba(0, 0, 0, 0.82);
+  color: #fff;
+  font: 12px/1.2 sans-serif;
+  pointer-events: none;
+}

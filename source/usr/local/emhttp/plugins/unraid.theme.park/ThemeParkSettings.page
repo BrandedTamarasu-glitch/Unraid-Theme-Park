@@ -1,0 +1,48 @@
+Menu="UnraidThemePark"
+Title="Theme Settings"
+Icon="fa-paint-brush"
+Tag="paint-brush"
+---
+<?php
+require_once "$docroot/plugins/unraid.theme.park/include/ThemePark.php";
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $cfg = utp_config();
+    $cfg['enabled'] = isset($_POST['enabled']) && $_POST['enabled'] === 'yes' ? 'yes' : 'no';
+    $cfg['theme'] = isset($_POST['theme']) ? $_POST['theme'] : 'dark';
+    utp_write_config($cfg);
+    utp_generate_css($cfg);
+}
+
+$cfg = utp_config();
+$themes = utp_themes();
+$status = utp_current_status();
+$enabled = isset($cfg['enabled']) && $cfg['enabled'] === 'yes';
+$selected = isset($cfg['theme']) ? $cfg['theme'] : 'dark';
+?>
+
+<form markdown="1" name="unraid_theme_park" method="POST">
+
+_(Theme)_:
+: <select name="theme">
+<?php
+foreach ($themes as $id => $theme) {
+    $id_safe = htmlspecialchars($id, ENT_QUOTES);
+    $name_safe = htmlspecialchars($theme['name'], ENT_QUOTES);
+    $is_selected = $id === $selected ? ' selected' : '';
+    echo "<option value=\"$id_safe\"$is_selected>$name_safe</option>\n";
+}
+?>
+  </select>
+
+_(Enabled)_:
+: <input type="checkbox" name="enabled" value="yes"<?php echo $enabled ? ' checked' : ''; ?>>
+
+_(Runtime status)_:
+: <?php echo htmlspecialchars($status['message'], ENT_QUOTES); ?>
+
+_(Generated stylesheet)_:
+: <code><?php echo htmlspecialchars($status['current_css'], ENT_QUOTES); ?></code>
+
+<input type="submit" value="Apply">
+</form>

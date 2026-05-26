@@ -1,0 +1,9 @@
+Menu="Settings:90"
+Type="menu"
+Title="Unraid Theme Park"
+Icon="fa-paint-brush"
+Tag="paint-brush"
+---
+<?php
+/* Settings category container. */
+?>

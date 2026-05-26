@@ -1,0 +1,37 @@
+{
+  "aquamarine": {
+    "name": "Aquamarine",
+    "file": "aquamarine.css",
+    "source": "themepark-dev/theme.park@1.22.0"
+  }
+,
+  "dark": {
+    "name": "Dark",
+    "file": "dark.css",
+    "source": "themepark-dev/theme.park@1.22.0"
+  }
+,
+  "dracula": {
+    "name": "Dracula",
+    "file": "dracula.css",
+    "source": "themepark-dev/theme.park@1.22.0"
+  }
+,
+  "hotpink": {
+    "name": "Hotpink",
+    "file": "hotpink.css",
+    "source": "themepark-dev/theme.park@1.22.0"
+  }
+,
+  "nord": {
+    "name": "Nord",
+    "file": "nord.css",
+    "source": "themepark-dev/theme.park@1.22.0"
+  }
+,
+  "space-gray": {
+    "name": "Space Gray",
+    "file": "space-gray.css",
+    "source": "themepark-dev/theme.park@1.22.0"
+  }
+}
