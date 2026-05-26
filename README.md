@@ -4,9 +4,20 @@ Theme Park-style themes for Unraid 7.2+ without the deprecated Theme Engine plug
 
 ## Status
 
-Unraid Theme Park is preparing its first beta release. Manual testing has validated the Theme Engine-free stylesheet hook, settings page, config persistence, theme switching, bundled Theme Park assets, and local compatibility layer on Unraid 7.3.0.
+Unraid Theme Park is in public beta. `v0.1.0-beta.7` is published and manually validated on Unraid `7.3.0`.
 
-Unraid 7.2.x validation is still pending before wider beta distribution.
+Validated so far:
+
+- Theme Engine-free stylesheet hook
+- Settings page
+- config persistence
+- theme switching
+- bundled Theme Park assets
+- local Unraid readability layer
+- Community Applications readability fixes
+- uninstall and reinstall lifecycle
+
+Unraid `7.2.x` validation is still pending before wider distribution.
 
 ## Why This Exists
 
@@ -35,7 +46,7 @@ Architecture details are in [ADR 0001](docs/adr/0001-css-injection-path.md).
 
 ## Bundled Themes
 
-The current curated beta set is vendored from Theme Park `1.22.0`:
+The current beta includes 10 official Theme Park theme options vendored from Theme Park `1.22.0`:
 
 - Aquamarine
 - Dark
@@ -63,7 +74,7 @@ Additional local Unraid themes are bundled from BrandedTamarasu-glitch repositor
 
 Validated:
 
-- Unraid 7.3.0
+- Unraid `7.3.0` with `v0.1.0-beta.7`
 
 Targeted but not fully validated yet:
 
@@ -78,22 +89,24 @@ source/usr/local/emhttp/plugins/unraid.theme.park/themes/compat/unraid-7.css
 
 ## Install
 
-Install-by-URL will be available after the first beta release asset is published.
+Install from Unraid WebGUI **Plugins > Install Plugin**, or from shell:
 
-Planned plugin URL:
+```sh
+plugin install https://raw.githubusercontent.com/BrandedTamarasu-glitch/Unraid-Theme-Park/main/plugin/unraid.theme.park.plg
+```
+
+Plugin URL:
 
 ```text
 https://raw.githubusercontent.com/BrandedTamarasu-glitch/Unraid-Theme-Park/main/plugin/unraid.theme.park.plg
 ```
 
-Until the beta release is published, use manual test installs only.
-
 ## Manual Test Install
 
-On a disposable Unraid test host:
+For local package testing on a disposable Unraid host:
 
 ```sh
-installpkg /path/to/unraid.theme.park-0.1.0-beta.1-noarch-1.txz
+installpkg /path/to/unraid.theme.park-<version>-noarch-1.txz
 /usr/local/emhttp/plugins/unraid.theme.park/scripts/apply-theme
 ```
 
@@ -126,7 +139,7 @@ Build artifacts are written to `dist/`:
 ## Release Prep
 
 ```sh
-scripts/prepare-release.sh 0.1.0-beta.1
+scripts/prepare-release.sh <version>
 ```
 
 This prepares:
@@ -149,7 +162,18 @@ It does not publish a GitHub release. Follow [Release Process](docs/release-proc
 
 ## Support Boundary
 
-This is not a full Theme Engine replacement. The first beta focuses on reliable CSS theme application for Unraid 7.2+ using local assets and a reversible plugin lifecycle.
+This is not a full Theme Engine replacement. The beta focuses on reliable CSS theme application for Unraid 7.2+ using local assets and a reversible plugin lifecycle.
+
+## Credits
+
+This project builds on the original Theme Park project by gilbN and contributors:
+
+- Theme Park docs: <https://docs.theme-park.dev/>
+- Theme Park source: <https://github.com/themepark-dev/theme.park/>
+
+The Theme Park option CSS is vendored from `themepark-dev/theme.park@1.22.0` and adapted for local Unraid plugin delivery. This project is not the upstream Theme Park project and does not imply endorsement by the Theme Park maintainers.
+
+Additional bundled local Unraid themes are credited in [Theme parity](docs/theme-parity.md).
 
 Deferred:
 

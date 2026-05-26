@@ -7,7 +7,7 @@ Produce a GitHub release containing the package archive and a committed plugin m
 ## Automated Prep
 
 ```sh
-scripts/prepare-release.sh 0.1.0-beta.1
+scripts/prepare-release.sh <version>
 ```
 
 This command:
@@ -45,10 +45,10 @@ Use this order:
 Publishing is intentionally manual:
 
 ```sh
-gh release create v0.1.0-beta.1 \
-  dist/unraid.theme.park-0.1.0-beta.1-noarch-1.txz \
-  --title "Unraid Theme Park v0.1.0-beta.1" \
-  --notes-file dist/release-notes-v0.1.0-beta.1.md \
+gh release create v<version> \
+  dist/unraid.theme.park-<version>-noarch-1.txz \
+  --title "Unraid Theme Park v<version>" \
+  --notes-file dist/release-notes-v<version>.md \
   --prerelease
 ```
 

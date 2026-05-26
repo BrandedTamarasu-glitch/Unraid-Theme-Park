@@ -4,7 +4,7 @@ Run this matrix on a disposable Unraid host before each beta.
 
 ## Environment
 
-- Unraid `7.3.0`, validated manually with `v0.1.0-beta.5`.
+- Unraid `7.3.0`, validated manually with `v0.1.0-beta.7`.
 - Add latest `7.2.x` before wider beta.
 - Chromium browser.
 - Firefox browser.
@@ -68,12 +68,13 @@ Validated on Unraid `7.3.0` with the built-in plugin uninstaller:
 
 ## Validation Log
 
-### Unraid 7.3.0, `v0.1.0-beta.5`
+### Unraid 7.3.0, `v0.1.0-beta.7`
 
 Manual validation passed:
 
 - Install from published plugin manifest.
-- Theme switching across Aquamarine, Dark, Dracula, Hotpink, Nord, and Space Gray.
+- Theme switching across bundled Theme Park options and local Unraid themes.
+- Local theme validation for Crema, Meridian, Meridian Light, and Ristretto.
 - Dashboard readability.
 - Apps / Community Applications readability, including top search area and category sidebar.
 - Main, Docker, Plugins, and Settings spot checks.
