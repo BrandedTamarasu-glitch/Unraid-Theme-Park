@@ -10,6 +10,8 @@ Produce a GitHub release containing the package archive and a committed plugin m
 scripts/prepare-release.sh <version>
 ```
 
+Use plain numeric versions, for example `0.1.2`. Avoid prerelease suffixes such as `-beta.10` in installable plugin manifests because Unraid's plugin version comparison can treat them as older than earlier beta builds.
+
 This command:
 
 - updates `VERSION`
@@ -48,8 +50,7 @@ Publishing is intentionally manual:
 gh release create v<version> \
   dist/unraid.theme.park-<version>-noarch-1.txz \
   --title "Unraid Theme Park v<version>" \
-  --notes-file dist/release-notes-v<version>.md \
-  --prerelease
+  --notes-file dist/release-notes-v<version>.md
 ```
 
 After publishing, install from:

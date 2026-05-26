@@ -1,10 +1,10 @@
 # Lifecycle Testing
 
-Run this matrix on a disposable Unraid host before each beta.
+Run this matrix on a disposable Unraid host before each community test release.
 
 ## Environment
 
-- Unraid `7.3.0`, validated manually with `v0.1.0-beta.7`.
+- Unraid `7.3.0`, validated manually with `v0.1.2`.
 - Add latest `7.2.x` before wider beta.
 - Chromium browser.
 - Firefox browser.
@@ -33,6 +33,13 @@ Run this matrix on a disposable Unraid host before each beta.
 1. Switch through Aquamarine, Dracula, Hotpink, Nord, and Space Gray.
 2. Refresh after each selection.
 3. Confirm no blank page or unreadable primary navigation.
+
+### Plugin Compatibility Spot Checks
+
+1. Open Apps / Community Applications.
+2. Confirm the search area, category sidebar, and app cards are readable.
+3. Open Main with Unassigned Devices visible.
+4. Confirm `usb_mounts`, `samba_mounts`, `disk-table-body`, and `remotes-table-body` rows do not render stock white boxes in dark themes.
 
 ### Disable Theme
 
@@ -68,7 +75,7 @@ Validated on Unraid `7.3.0` with the built-in plugin uninstaller:
 
 ## Validation Log
 
-### Unraid 7.3.0, `v0.1.0-beta.7`
+### Unraid 7.3.0, `v0.1.2`
 
 Manual validation passed:
 
@@ -77,6 +84,7 @@ Manual validation passed:
 - Local theme validation for Crema, Meridian, Meridian Light, and Ristretto.
 - Dashboard readability.
 - Apps / Community Applications readability, including top search area and category sidebar.
+- Unassigned Devices readability, including disk and remote share table rows.
 - Main, Docker, Plugins, and Settings spot checks.
 - Disable and stock-style return.
 - Reboot persistence.

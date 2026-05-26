@@ -4,7 +4,7 @@ Theme Park-style themes for Unraid 7.2+ without the deprecated Theme Engine plug
 
 ## Status
 
-Unraid Theme Park is in public beta. `v0.1.0-beta.7` is published and manually validated on Unraid `7.3.0`.
+Unraid Theme Park is in public beta. `v0.1.2` is the current community test baseline and is manually validated on Unraid `7.3.0`.
 
 Validated so far:
 
@@ -15,9 +15,12 @@ Validated so far:
 - bundled Theme Park assets
 - local Unraid readability layer
 - Community Applications readability fixes
+- Unassigned Devices readability fixes
 - uninstall and reinstall lifecycle
 
 Unraid `7.2.x` validation is still pending before wider distribution.
+
+Release versions should remain plain numeric values such as `0.1.2`. Unraid's plugin version comparison can treat prerelease suffixes such as `-beta.10` as older than earlier beta builds.
 
 ## Why This Exists
 
@@ -46,7 +49,7 @@ Architecture details are in [ADR 0001](docs/adr/0001-css-injection-path.md).
 
 ## Bundled Themes
 
-The current beta includes 10 official Theme Park theme options vendored from Theme Park `1.22.0`:
+The current community test baseline includes 10 official Theme Park theme options vendored from Theme Park `1.22.0`:
 
 - Aquamarine
 - Dark
@@ -74,7 +77,7 @@ Additional local Unraid themes are bundled from BrandedTamarasu-glitch repositor
 
 Validated:
 
-- Unraid `7.3.0` with `v0.1.0-beta.7`
+- Unraid `7.3.0` with `v0.1.2`, including Community Applications and Unassigned Devices spot checks.
 
 Targeted but not fully validated yet:
 
@@ -86,6 +89,14 @@ Unraid-specific readability and selector drift fixes live in:
 ```text
 source/usr/local/emhttp/plugins/unraid.theme.park/themes/compat/unraid-7.css
 ```
+
+Imported local themes also load:
+
+```text
+source/usr/local/emhttp/plugins/unraid.theme.park/themes/compat/local-unraid-7.css
+```
+
+The compatibility layer currently includes explicit coverage for Community Applications and Unassigned Devices table selectors such as `usb_mounts`, `samba_mounts`, `disk-table-body`, and `remotes-table-body`.
 
 ## Install
 

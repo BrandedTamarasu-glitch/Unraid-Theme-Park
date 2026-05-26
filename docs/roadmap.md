@@ -24,7 +24,12 @@
 
 ## 5. Community Beta
 
-- Keep `v0.1.0-beta.7` available as the current validated Unraid `7.3.0` prerelease.
+- Use `v0.1.2` as the current community test baseline for Unraid `7.3.0`.
 - Validate beta on latest Unraid `7.2.x`.
 - Collect screenshots and environment details.
 - Keep Plex deferred until its resource assets are packaged locally.
+
+## 6. Versioning
+
+- Use plain numeric plugin versions such as `0.1.2`.
+- Avoid prerelease suffixes in installable Unraid plugin manifests because Unraid can compare suffixes unexpectedly.
