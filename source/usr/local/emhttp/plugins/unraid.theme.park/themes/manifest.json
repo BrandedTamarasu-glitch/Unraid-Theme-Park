@@ -58,4 +58,28 @@
     "file": "space-gray.css",
     "source": "themepark-dev/theme.park@1.22.0"
   }
+,
+  "crema": {
+    "name": "Crema",
+    "file": "crema.css",
+    "source": "BrandedTamarasu-glitch/Ground_Control@da92af7749e7dd18cf42a6b115d56b22201324d3"
+  }
+,
+  "meridian": {
+    "name": "Meridian",
+    "file": "meridian.css",
+    "source": "BrandedTamarasu-glitch/unraid-meridian@9a3f3fb5a923e570d8a2076fb3070cad05eb20e2"
+  }
+,
+  "meridian-light": {
+    "name": "Meridian Light",
+    "file": "meridian-light.css",
+    "source": "BrandedTamarasu-glitch/unraid-meridian@9a3f3fb5a923e570d8a2076fb3070cad05eb20e2"
+  }
+,
+  "ristretto": {
+    "name": "Ristretto",
+    "file": "ristretto.css",
+    "source": "BrandedTamarasu-glitch/Ground_Control@da92af7749e7dd18cf42a6b115d56b22201324d3"
+  }
 }

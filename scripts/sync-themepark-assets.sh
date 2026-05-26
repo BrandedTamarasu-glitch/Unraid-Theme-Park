@@ -19,6 +19,13 @@ THEMES=(
   space-gray:Space\ Gray
 )
 
+LOCAL_THEMES=(
+  crema:Crema:BrandedTamarasu-glitch/Ground_Control@da92af7749e7dd18cf42a6b115d56b22201324d3
+  meridian:Meridian:BrandedTamarasu-glitch/unraid-meridian@9a3f3fb5a923e570d8a2076fb3070cad05eb20e2
+  meridian-light:Meridian\ Light:BrandedTamarasu-glitch/unraid-meridian@9a3f3fb5a923e570d8a2076fb3070cad05eb20e2
+  ristretto:Ristretto:BrandedTamarasu-glitch/Ground_Control@da92af7749e7dd18cf42a6b115d56b22201324d3
+)
+
 mkdir -p "$THEME_DIR/base" "$THEME_DIR/defaults" "$THEME_DIR/options" "$THEME_DIR/overrides" "$THEME_DIR/compat"
 
 curl -fsSL "$BASE_URL/base/unraid/unraid-base.css" \
@@ -59,6 +66,29 @@ CSS
     "name": "${name}",
     "file": "${id}.css",
     "source": "themepark-dev/theme.park@${UPSTREAM_REF}"
+  }
+JSON
+done
+
+for entry in "${LOCAL_THEMES[@]}"; do
+  id="${entry%%:*}"
+  rest="${entry#*:}"
+  name="${rest%%:*}"
+  source="${rest#*:}"
+  if [[ ! -f "$THEME_DIR/${id}.css" ]]; then
+    echo "Skipping local theme ${id}: $THEME_DIR/${id}.css not found" >&2
+    continue
+  fi
+
+  if [[ "$first" -eq 0 ]]; then
+    printf ',\n' >> "$THEME_DIR/manifest.json"
+  fi
+  first=0
+  cat >> "$THEME_DIR/manifest.json" <<JSON
+  "${id}": {
+    "name": "${name}",
+    "file": "${id}.css",
+    "source": "${source}"
   }
 JSON
 done

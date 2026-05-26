@@ -52,6 +52,13 @@ Plex is deferred because the upstream theme references `/resources/...` image as
 
 Theme parity tracking lives in [Theme parity](docs/theme-parity.md). The first parity target is Theme Park's 11 official theme options; community theme options are intentionally out of scope until the core lifecycle and readability path is stable.
 
+Additional local Unraid themes are bundled from BrandedTamarasu-glitch repositories:
+
+- Crema
+- Meridian
+- Meridian Light
+- Ristretto
+
 ## Compatibility
 
 Validated:

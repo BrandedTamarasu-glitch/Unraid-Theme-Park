@@ -34,6 +34,17 @@ Theme Park also documents community theme options separately. Community themes a
 | Maroon | Supported | Imported from Theme Park `1.22.0`; needs manual Unraid validation. |
 | Plex | Deferred | Upstream references `/resources/...`; needs local asset packaging before support. |
 
+## Local Theme Coverage
+
+The plugin also bundles standalone Unraid themes from BrandedTamarasu-glitch repositories. These are not Theme Park parity items, but they are first-class selectable plugin themes.
+
+| Theme | Source | Notes |
+| --- | --- | --- |
+| Crema | `BrandedTamarasu-glitch/Ground_Control@da92af7749e7dd18cf42a6b115d56b22201324d3` | Light Ground Control theme. |
+| Meridian | `BrandedTamarasu-glitch/unraid-meridian@9a3f3fb5a923e570d8a2076fb3070cad05eb20e2` | Dark Meridian theme. |
+| Meridian Light | `BrandedTamarasu-glitch/unraid-meridian@9a3f3fb5a923e570d8a2076fb3070cad05eb20e2` | Light Meridian theme. |
+| Ristretto | `BrandedTamarasu-glitch/Ground_Control@da92af7749e7dd18cf42a6b115d56b22201324d3` | Dark Ground Control theme. |
+
 ## Parity Plan
 
 1. Test Hotline, Organizr, Overseerr, and Maroon on Unraid `7.3.0`.
