@@ -12,6 +12,7 @@ This repository is in Phase 0 feasibility work. The first milestone is to prove 
 - Package theme assets locally inside the plugin.
 - Inject one plugin-owned stylesheet through Unraid's WebGUI plugin system.
 - Keep disable, reset, and uninstall paths simple enough to recover stock UI without shell edits.
+- Keep Unraid-specific readability fixes in `themes/compat/unraid-7.css`.
 
 See [ADR 0001](docs/adr/0001-css-injection-path.md) and the [Phase 0 validation plan](docs/phase-0-validation.md).
 

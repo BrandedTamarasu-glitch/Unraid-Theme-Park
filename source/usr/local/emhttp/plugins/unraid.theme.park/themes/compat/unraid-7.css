@@ -1,0 +1,56 @@
+/* Local Unraid 7.x compatibility overrides.
+ *
+ * Keep this file focused on Unraid WebGUI readability and selector drift fixes.
+ * Do not copy upstream Theme Park theme variables here; this layer should remain
+ * small and easy to audit after Unraid updates.
+ */
+
+:root {
+  --utp-readable-border: rgba(255, 255, 255, 0.22);
+  --utp-readable-surface: rgba(0, 0, 0, 0.32);
+  --utp-readable-surface-strong: rgba(0, 0, 0, 0.48);
+}
+
+input,
+select,
+textarea {
+  color: var(--text) !important;
+  background-color: var(--utp-readable-surface) !important;
+  border-color: var(--utp-readable-border) !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  color: var(--text-hover) !important;
+  background-color: var(--utp-readable-surface-strong) !important;
+  border-color: rgb(var(--accent-color)) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 1;
+}
+
+option {
+  color: var(--text) !important;
+  background-color: #202020 !important;
+}
+
+code,
+pre {
+  color: var(--text-hover) !important;
+  background-color: var(--utp-readable-surface-strong) !important;
+  border-color: var(--utp-readable-border) !important;
+}
+
+.sweet-alert input,
+.swal-modal input,
+.swal-content input,
+.sweet-alert select,
+.swal-modal select,
+.swal-content select {
+  color: var(--text) !important;
+  background-color: var(--utp-readable-surface-strong) !important;
+}
