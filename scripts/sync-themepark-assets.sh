@@ -26,7 +26,7 @@ LOCAL_THEMES=(
   ristretto:Ristretto:BrandedTamarasu-glitch/Ground_Control@da92af7749e7dd18cf42a6b115d56b22201324d3
 )
 
-mkdir -p "$THEME_DIR/base" "$THEME_DIR/defaults" "$THEME_DIR/options" "$THEME_DIR/overrides" "$THEME_DIR/compat"
+mkdir -p "$THEME_DIR/base" "$THEME_DIR/defaults" "$THEME_DIR/options" "$THEME_DIR/overrides" "$THEME_DIR/compat" "$THEME_DIR/local"
 
 curl -fsSL "$BASE_URL/base/unraid/unraid-base.css" \
   | sed \
@@ -75,10 +75,15 @@ for entry in "${LOCAL_THEMES[@]}"; do
   rest="${entry#*:}"
   name="${rest%%:*}"
   source="${rest#*:}"
-  if [[ ! -f "$THEME_DIR/${id}.css" ]]; then
-    echo "Skipping local theme ${id}: $THEME_DIR/${id}.css not found" >&2
+  if [[ ! -f "$THEME_DIR/local/${id}.css" ]]; then
+    echo "Skipping local theme ${id}: $THEME_DIR/local/${id}.css not found" >&2
     continue
   fi
+  cat > "$THEME_DIR/${id}.css" <<CSS
+/* Generated local wrapper for ${name}. */
+@import url("/plugins/unraid.theme.park/themes/local/${id}.css");
+@import url("/plugins/unraid.theme.park/themes/compat/local-unraid-7.css");
+CSS
 
   if [[ "$first" -eq 0 ]]; then
     printf ',\n' >> "$THEME_DIR/manifest.json"

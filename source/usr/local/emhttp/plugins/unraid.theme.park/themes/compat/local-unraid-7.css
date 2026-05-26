@@ -1,0 +1,163 @@
+/* Local-theme Unraid 7.x compatibility overrides.
+ *
+ * The imported Meridian/Ground Control styles define Dynamix tokens rather than
+ * Theme Park tokens. Keep this layer mapped to those native variables so the
+ * standalone themes can share the same CA and table readability fixes.
+ */
+
+:root {
+  --utp-local-surface: var(--mild-background-color, #202020);
+  --utp-local-surface-strong: var(--dashboard-background-color, var(--mild-background-color, #181818));
+  --utp-local-table-head: var(--table-header-background-color, var(--utp-local-surface-strong));
+  --utp-local-input: var(--input-bg-color, var(--utp-local-surface));
+  --utp-local-text: var(--text-color, #eeeeee);
+  --utp-local-muted: var(--alt-text-color, var(--utp-local-text));
+  --utp-local-link: var(--link-text-color, var(--utp-local-text));
+  --utp-local-border: var(--border-color, rgba(255, 255, 255, 0.22));
+}
+
+thead,
+thead tr,
+thead td,
+thead th,
+table thead,
+table thead tr,
+table thead td,
+table thead th,
+table.tablesorter thead,
+table.tablesorter thead tr,
+table.tablesorter thead tr th,
+table.disk_status thead,
+table.disk_status thead tr,
+table.disk_status thead td,
+table.share_status thead,
+table.share_status thead tr,
+table.share_status thead td {
+  color: var(--utp-local-text) !important;
+  background: var(--utp-local-table-head) !important;
+  background-color: var(--utp-local-table-head) !important;
+  border-color: var(--utp-local-border) !important;
+}
+
+input,
+select,
+textarea,
+#searchBox,
+.searchSubmit,
+#sidenavContent input,
+#sidenavContent select,
+.ca_templatesDisplay input,
+.ca_templatesDisplay select {
+  color: var(--utp-local-text) !important;
+  background: var(--utp-local-input) !important;
+  background-color: var(--utp-local-input) !important;
+  border-color: var(--utp-local-border) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--utp-local-muted) !important;
+  opacity: 1;
+}
+
+div.tabs,
+div.frame,
+.sidenav,
+#sidenavContent,
+.ca_templatesDisplay,
+.ca_appDetails,
+.ca_holder,
+.ca_holderDocker,
+.ca_category,
+.ca_home,
+.ca_sidebar,
+.ca_topbar,
+.ca_menu,
+.caMenu,
+[id*="ca"],
+[id*="CA"],
+[class*="CA"],
+[class*="ca_"],
+[class*="ca-"] {
+  color: var(--utp-local-text) !important;
+  background: var(--utp-local-surface-strong) !important;
+  background-color: var(--utp-local-surface-strong) !important;
+  border-color: var(--utp-local-border) !important;
+}
+
+div.tabs *,
+div.frame *,
+#sidenavContent *,
+.ca_templatesDisplay *,
+.ca_appDetails *,
+.ca_holder *,
+.ca_holderDocker *,
+.ca_menu *,
+.caMenu *,
+[id*="ca"] *,
+[id*="CA"] *,
+[class*="CA"] *,
+[class*="ca_"] *,
+[class*="ca-"] * {
+  color: var(--utp-local-text) !important;
+  border-color: var(--utp-local-border) !important;
+}
+
+.ca_templatesDisplay a,
+.ca_appDetails a,
+.ca_holder a,
+.ca_holderDocker a,
+div.tabs a,
+div.frame a,
+.sidenav a,
+#sidenavContent a,
+li.caMenuItem,
+.ca_readmore,
+.card_readmore,
+.homeMore,
+.popUpClose {
+  color: var(--utp-local-link) !important;
+}
+
+form:has(#searchBox),
+div:has(> #searchBox),
+div:has(#searchBox):not(.ca_holder):not(.ca_holderDocker),
+td:has(#searchBox),
+tr:has(#searchBox),
+form:has(.searchSubmit),
+div:has(> .searchSubmit),
+div:has(.searchSubmit):not(.ca_holder):not(.ca_holderDocker),
+td:has(.searchSubmit),
+tr:has(.searchSubmit),
+div:has(> .caMenuItem),
+div:has(.caMenuItem):not(.ca_holder):not(.ca_holderDocker),
+ul:has(.caMenuItem),
+ol:has(.caMenuItem),
+li:has(.caMenuItem),
+td:has(.caMenuItem),
+tr:has(.caMenuItem),
+table:has(.caMenuItem),
+tbody:has(.caMenuItem),
+div:has(> .selectedMenu),
+div:has(.selectedMenu):not(.ca_holder):not(.ca_holderDocker),
+ul:has(.selectedMenu),
+ol:has(.selectedMenu),
+li:has(.selectedMenu),
+td:has(.selectedMenu),
+tr:has(.selectedMenu),
+table:has(.selectedMenu),
+tbody:has(.selectedMenu),
+div:has(> .hoverMenu),
+div:has(.hoverMenu):not(.ca_holder):not(.ca_holderDocker),
+ul:has(.hoverMenu),
+ol:has(.hoverMenu),
+li:has(.hoverMenu),
+td:has(.hoverMenu),
+tr:has(.hoverMenu),
+table:has(.hoverMenu),
+tbody:has(.hoverMenu) {
+  color: var(--utp-local-text) !important;
+  background: var(--utp-local-surface-strong) !important;
+  background-color: var(--utp-local-surface-strong) !important;
+  border-color: var(--utp-local-border) !important;
+}

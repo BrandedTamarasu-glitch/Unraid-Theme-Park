@@ -46,6 +46,7 @@ h6,
 legend,
 caption,
 thead,
+thead tr,
 thead td,
 thead th,
 .title,
@@ -96,6 +97,29 @@ table th,
 .panel-header,
 .tile-header,
 .card-header {
+  border-color: var(--utp-readable-border) !important;
+}
+
+thead,
+thead tr,
+thead td,
+thead th,
+table thead,
+table thead tr,
+table thead td,
+table thead th,
+table.tablesorter thead,
+table.tablesorter thead tr,
+table.tablesorter thead tr th,
+table.disk_status thead,
+table.disk_status thead tr,
+table.disk_status thead td,
+table.share_status thead,
+table.share_status thead tr,
+table.share_status thead td {
+  color: var(--text-hover) !important;
+  background: var(--utp-readable-surface-strong) !important;
+  background-color: var(--utp-readable-surface-strong) !important;
   border-color: var(--utp-readable-border) !important;
 }
 
