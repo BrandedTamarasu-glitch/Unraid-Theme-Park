@@ -1,9 +1,9 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "unraid.theme.park">
 <!ENTITY author    "BrandedTamarasu-glitch">
-<!ENTITY version   "0.1.1-beta.1">
-<!ENTITY package   "https://github.com/BrandedTamarasu-glitch/Unraid-Theme-Park/releases/download/v0.1.1-beta.1/unraid.theme.park-0.1.1-beta.1-noarch-1.txz">
-<!ENTITY md5       "e5e820aab1c8f521ffb75bdbb2532ec5">
+<!ENTITY version   "0.1.1">
+<!ENTITY package   "https://github.com/BrandedTamarasu-glitch/Unraid-Theme-Park/releases/download/v0.1.1/unraid.theme.park-0.1.1-noarch-1.txz">
+<!ENTITY md5       "bb807964b42cbb99ab32e32570ee3041">
 ]>
 
 <PLUGIN name="&name;"
@@ -28,7 +28,7 @@
 <INLINE>
 <![CDATA[
 set -e
-upgradepkg --reinstall --install-new /boot/config/plugins/unraid.theme.park/unraid.theme.park-0.1.1-beta.1-noarch-1.txz
+upgradepkg --reinstall --install-new /boot/config/plugins/unraid.theme.park/unraid.theme.park-0.1.1-noarch-1.txz
 /usr/local/emhttp/plugins/unraid.theme.park/scripts/apply-theme || true
 ]]>
 </INLINE>
