@@ -28,7 +28,7 @@
 <INLINE>
 <![CDATA[
 set -e
-upgradepkg --install-new /boot/config/plugins/unraid.theme.park/unraid.theme.park-@VERSION@-noarch-1.txz
+upgradepkg --reinstall --install-new /boot/config/plugins/unraid.theme.park/unraid.theme.park-@VERSION@-noarch-1.txz
 /usr/local/emhttp/plugins/unraid.theme.park/scripts/apply-theme || true
 ]]>
 </INLINE>
@@ -37,6 +37,7 @@ upgradepkg --install-new /boot/config/plugins/unraid.theme.park/unraid.theme.par
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
 <![CDATA[
+removepkg unraid.theme.park || true
 rm -rf /usr/local/emhttp/plugins/unraid.theme.park
 rm -f /boot/config/plugins/unraid.theme.park/unraid.theme.park-*.txz
 rm -f /boot/config/plugins/unraid.theme.park.plg
