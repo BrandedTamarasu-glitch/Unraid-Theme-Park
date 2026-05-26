@@ -1,0 +1,120 @@
+name: Theme readability report
+description: Report unreadable text, white boxes, contrast issues, or plugin page styling drift.
+title: "[Readability]: "
+labels:
+  - readability
+  - community-test
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing Unraid Theme Park. Screenshots are the fastest way to diagnose selector drift, especially for third-party plugin pages.
+
+  - type: input
+    id: unraid-version
+    attributes:
+      label: Unraid version
+      description: Run `cat /etc/unraid-version` if unsure.
+      placeholder: 7.3.0
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Unraid Theme Park version
+      description: Use the version shown in Plugins or the installed package name.
+      placeholder: 0.1.2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Theme
+      options:
+        - Aquamarine
+        - Crema
+        - Dark
+        - Dracula
+        - Hotline
+        - Hotpink
+        - Maroon
+        - Meridian
+        - Meridian Light
+        - Nord
+        - Organizr
+        - Overseerr
+        - Ristretto
+        - Space Gray
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      placeholder: Chrome 125, Firefox 126, Safari 18
+    validations:
+      required: true
+
+  - type: dropdown
+    id: navigation-layout
+    attributes:
+      label: Navigation layout
+      options:
+        - Top navigation
+        - Sidebar
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: input
+    id: page
+    attributes:
+      label: Page or plugin affected
+      placeholder: Dashboard, Main, Apps / Community Applications, Unassigned Devices, Docker, Settings
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is unreadable?
+      description: Describe the affected area and what colors are clashing.
+      placeholder: "Example: On Main > Unassigned Devices, partition rows have a white background with light text."
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Drag screenshots here. Include the full page area when possible.
+      placeholder: Attach one or more screenshots.
+    validations:
+      required: true
+
+  - type: textarea
+    id: validation
+    attributes:
+      label: Quick checks
+      description: These help separate browser cache from CSS coverage issues.
+      value: |
+        - [ ] I hard-refreshed the browser after applying the theme.
+        - [ ] I tried disabling and re-enabling the theme.
+        - [ ] I confirmed the issue still happens after switching away and back to this theme.
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Optional command output
+      description: If comfortable, paste relevant output.
+      render: shell
+      placeholder: |
+        cat /etc/unraid-version
+        cat /usr/local/emhttp/plugins/unraid.theme.park/generated/current.css
+        grep -E 'version|release/download|upgradepkg' /boot/config/plugins/unraid.theme.park.plg 2>/dev/null

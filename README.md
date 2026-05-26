@@ -170,6 +170,7 @@ It does not publish a GitHub release. Follow [Release Process](docs/release-proc
 - [Theme parity](docs/theme-parity.md)
 - [Community beta plan](docs/community-beta.md)
 - [Phase 0 validation](docs/phase-0-validation.md)
+- [Known issues](KNOWN_ISSUES.md)
 
 ## Support Boundary
 
