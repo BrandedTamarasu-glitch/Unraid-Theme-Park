@@ -46,6 +46,8 @@ The current curated beta set is vendored from Theme Park `1.22.0`:
 
 Plex is deferred because the upstream theme references `/resources/...` image assets that are not packaged locally yet.
 
+Theme parity tracking lives in [Theme parity](docs/theme-parity.md). The first parity target is Theme Park's 11 official theme options; community theme options are intentionally out of scope until the core lifecycle and readability path is stable.
+
 ## Compatibility
 
 Validated:
@@ -130,6 +132,7 @@ It does not publish a GitHub release. Follow [Release Process](docs/release-proc
 - [Release process](docs/release-process.md)
 - [Lifecycle testing](docs/lifecycle-testing.md)
 - [Theme hardening](docs/theme-hardening.md)
+- [Theme parity](docs/theme-parity.md)
 - [Community beta plan](docs/community-beta.md)
 - [Phase 0 validation](docs/phase-0-validation.md)
 
