@@ -17,15 +17,39 @@
     "source": "themepark-dev/theme.park@1.22.0"
   }
 ,
+  "hotline": {
+    "name": "Hotline",
+    "file": "hotline.css",
+    "source": "themepark-dev/theme.park@1.22.0"
+  }
+,
   "hotpink": {
     "name": "Hotpink",
     "file": "hotpink.css",
     "source": "themepark-dev/theme.park@1.22.0"
   }
 ,
+  "maroon": {
+    "name": "Maroon",
+    "file": "maroon.css",
+    "source": "themepark-dev/theme.park@1.22.0"
+  }
+,
   "nord": {
     "name": "Nord",
     "file": "nord.css",
+    "source": "themepark-dev/theme.park@1.22.0"
+  }
+,
+  "organizr": {
+    "name": "Organizr",
+    "file": "organizr.css",
+    "source": "themepark-dev/theme.park@1.22.0"
+  }
+,
+  "overseerr": {
+    "name": "Overseerr",
+    "file": "overseerr.css",
     "source": "themepark-dev/theme.park@1.22.0"
   }
 ,

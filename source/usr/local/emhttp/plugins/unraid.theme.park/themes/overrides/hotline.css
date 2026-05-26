@@ -1,0 +1,6 @@
+/* Local per-theme readability overrides. */
+
+:root {
+  --button-text: #080808;
+  --button-text-hover: #080808;
+}

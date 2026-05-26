@@ -10,8 +10,12 @@ THEMES=(
   aquamarine:Aquamarine
   dark:Dark
   dracula:Dracula
+  hotline:Hotline
   hotpink:Hotpink
+  maroon:Maroon
   nord:Nord
+  organizr:Organizr
+  overseerr:Overseerr
   space-gray:Space\ Gray
 )
 
@@ -42,6 +46,9 @@ for entry in "${THEMES[@]}"; do
 @import url("/plugins/unraid.theme.park/themes/overrides/${id}.css");
 @import url("/plugins/unraid.theme.park/themes/compat/unraid-7.css");
 CSS
+  if [[ ! -f "$THEME_DIR/overrides/${id}.css" ]]; then
+    printf '/* Local per-theme readability overrides. */\n' > "$THEME_DIR/overrides/${id}.css"
+  fi
 
   if [[ "$first" -eq 0 ]]; then
     printf ',\n' >> "$THEME_DIR/manifest.json"

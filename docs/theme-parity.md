@@ -28,20 +28,18 @@ Theme Park also documents community theme options separately. Community themes a
 | Hotpink | Supported | Validated on Unraid `7.3.0` with `v0.1.0-beta.5`. |
 | Nord | Supported | Validated on Unraid `7.3.0` with `v0.1.0-beta.5`. |
 | Space Gray | Supported | Validated on Unraid `7.3.0` with `v0.1.0-beta.5`. |
-| Hotline | Missing | Candidate for next import pass. |
-| Organizr | Missing | Candidate for next import pass. |
-| Overseerr | Missing | Candidate for next import pass. |
-| Maroon | Missing | Candidate for next import pass. |
+| Hotline | Supported | Imported from Theme Park `1.22.0`; needs manual Unraid validation. |
+| Organizr | Supported | Imported from Theme Park `1.22.0`; needs manual Unraid validation. |
+| Overseerr | Supported | Imported from Theme Park `1.22.0`; needs manual Unraid validation. |
+| Maroon | Supported | Imported from Theme Park `1.22.0`; needs manual Unraid validation. |
 | Plex | Deferred | Upstream references `/resources/...`; needs local asset packaging before support. |
 
 ## Parity Plan
 
-1. Import Hotline, Organizr, Overseerr, and Maroon from Theme Park `1.22.0`.
-2. Generate wrappers and empty local override files for each imported theme.
-3. Run `scripts/audit-theme-contrast.js --strict`.
-4. Test Dashboard, Apps, Main, Docker, Plugins, and Settings on Unraid `7.3.0`.
-5. Add targeted overrides only when a theme accent or button state fails contrast.
-6. Keep Plex deferred until resource references are vendored and rewritten to local plugin paths.
+1. Test Hotline, Organizr, Overseerr, and Maroon on Unraid `7.3.0`.
+2. Test Dashboard, Apps, Main, Docker, Plugins, and Settings for each new theme.
+3. Add targeted overrides only when a theme accent or button state fails contrast.
+4. Keep Plex deferred until resource references are vendored and rewritten to local plugin paths.
 
 ## Non-Goals For First Parity Pass
 

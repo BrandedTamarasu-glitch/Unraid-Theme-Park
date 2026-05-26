@@ -40,8 +40,12 @@ The current curated beta set is vendored from Theme Park `1.22.0`:
 - Aquamarine
 - Dark
 - Dracula
+- Hotline
 - Hotpink
+- Maroon
 - Nord
+- Organizr
+- Overseerr
 - Space Gray
 
 Plex is deferred because the upstream theme references `/resources/...` image assets that are not packaged locally yet.
