@@ -4,7 +4,7 @@ Run this matrix on a disposable Unraid host before each beta.
 
 ## Environment
 
-- Unraid `7.3.0`, currently validated manually.
+- Unraid `7.3.0`, validated manually with `v0.1.0-beta.5`.
 - Add latest `7.2.x` before wider beta.
 - Chromium browser.
 - Firefox browser.
@@ -65,6 +65,22 @@ Validated on Unraid `7.3.0` with the built-in plugin uninstaller:
 - `/usr/local/emhttp/plugins/unraid.theme.park` was removed.
 - `/boot/config/plugins/unraid.theme.park/unraid.theme.park.cfg` remained.
 - Retaining the config is intentional unless a future purge option is added.
+
+## Validation Log
+
+### Unraid 7.3.0, `v0.1.0-beta.5`
+
+Manual validation passed:
+
+- Install from published plugin manifest.
+- Theme switching across Aquamarine, Dark, Dracula, Hotpink, Nord, and Space Gray.
+- Dashboard readability.
+- Apps / Community Applications readability, including top search area and category sidebar.
+- Main, Docker, Plugins, and Settings spot checks.
+- Disable and stock-style return.
+- Reboot persistence.
+- Built-in plugin uninstall.
+- Reinstall over preserved config.
 
 ## Recovery
 
