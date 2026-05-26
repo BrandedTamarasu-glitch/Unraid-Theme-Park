@@ -7,8 +7,8 @@
 
 :root {
   --utp-readable-border: rgba(255, 255, 255, 0.22);
-  --utp-readable-surface: rgba(0, 0, 0, 0.32);
-  --utp-readable-surface-strong: rgba(0, 0, 0, 0.48);
+  --utp-readable-surface: rgba(0, 0, 0, 0.72);
+  --utp-readable-surface-strong: rgba(0, 0, 0, 0.86);
   --utp-readable-surface-solid: #1f2328;
 }
 
@@ -83,6 +83,7 @@ table.tablesorter,
 .status,
 .warning,
 .notice {
+  background: var(--utp-readable-surface) !important;
   background-color: var(--utp-readable-surface) !important;
   border-color: var(--utp-readable-border) !important;
 }
@@ -102,6 +103,7 @@ table tr:nth-child(even),
 table.tablesorter tbody tr:nth-child(even),
 table.share_status tbody tr:nth-child(even),
 table.disk_status tbody tr:nth-child(even) {
+  background: var(--utp-readable-surface) !important;
   background-color: var(--utp-readable-surface) !important;
 }
 
@@ -109,7 +111,37 @@ table tr:nth-child(odd),
 table.tablesorter tbody tr:nth-child(odd),
 table.share_status tbody tr:nth-child(odd),
 table.disk_status tbody tr:nth-child(odd) {
+  background: var(--utp-readable-surface-strong) !important;
   background-color: var(--utp-readable-surface-strong) !important;
+}
+
+table.dashboard,
+table.dashboard tbody,
+table.dashboard tr,
+table.dashboard td,
+table.share_status.dashboard,
+table.share_status.dashboard tbody,
+table.share_status.dashboard tr,
+table.share_status.dashboard td,
+[id^="db-box"],
+[id^="db-box"] tbody,
+[id^="db-box"] tr,
+[id^="db-box"] td {
+  background: var(--utp-readable-surface-strong) !important;
+  background-color: var(--utp-readable-surface-strong) !important;
+  color: var(--text) !important;
+}
+
+table.dashboard th,
+table.dashboard thead,
+table.dashboard thead td,
+table.share_status.dashboard th,
+table.share_status.dashboard thead,
+table.share_status.dashboard thead td,
+[id^="db-box"] th,
+[id^="db-box"] thead,
+[id^="db-box"] thead td {
+  color: var(--text-hover) !important;
 }
 
 a,
