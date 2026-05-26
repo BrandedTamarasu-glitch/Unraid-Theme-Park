@@ -7,9 +7,10 @@ PKG_NAME="unraid.theme.park-${VERSION}-noarch-1.txz"
 DIST="$ROOT/dist"
 WORK="$ROOT/build"
 PKGROOT="$WORK/pkgroot"
+PLG_OUT="${PLG_OUT:-$DIST/unraid.theme.park.plg}"
 
 rm -rf "$WORK" "$DIST"
-mkdir -p "$PKGROOT" "$DIST"
+mkdir -p "$PKGROOT" "$DIST" "$(dirname "$PLG_OUT")"
 
 cp -R "$ROOT/source/." "$PKGROOT/"
 chmod 0755 "$PKGROOT/usr/local/emhttp/plugins/unraid.theme.park/scripts/apply-theme"
@@ -34,7 +35,7 @@ MD5="$(md5sum "$DIST/$PKG_NAME" | awk '{print $1}')"
 sed \
   -e "s/@VERSION@/$VERSION/g" \
   -e "s/@MD5@/$MD5/g" \
-  "$ROOT/plugin/unraid.theme.park.plg.in" > "$DIST/unraid.theme.park.plg"
+  "$ROOT/plugin/unraid.theme.park.plg.in" > "$PLG_OUT"
 
 printf 'Built %s\n' "$DIST/$PKG_NAME"
-printf 'Built %s\n' "$DIST/unraid.theme.park.plg"
+printf 'Built %s\n' "$PLG_OUT"

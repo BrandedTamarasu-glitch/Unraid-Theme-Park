@@ -5,9 +5,13 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 test -f "$ROOT/source/usr/local/emhttp/plugins/unraid.theme.park/ThemeParkGlobal.page"
 test -f "$ROOT/source/usr/local/emhttp/plugins/unraid.theme.park/UnraidThemePark.page"
+test -f "$ROOT/source/usr/local/emhttp/plugins/unraid.theme.park/ThemeParkSettings.page"
 test -f "$ROOT/source/usr/local/emhttp/plugins/unraid.theme.park/include/ThemePark.php"
 test -f "$ROOT/source/usr/local/emhttp/plugins/unraid.theme.park/include/Apply.php"
 test -f "$ROOT/source/usr/local/emhttp/plugins/unraid.theme.park/themes/manifest.json"
+test -f "$ROOT/source/usr/local/emhttp/plugins/unraid.theme.park/themes/compat/unraid-7.css"
+grep -q 'compat/unraid-7.css' "$ROOT"/source/usr/local/emhttp/plugins/unraid.theme.park/themes/*.css
+! grep -R -E 'theme-park.dev|raw.githubusercontent|/css/|/resources/' "$ROOT/source/usr/local/emhttp/plugins/unraid.theme.park/themes"
 
 if command -v php >/dev/null 2>&1; then
   php -l "$ROOT/source/usr/local/emhttp/plugins/unraid.theme.park/include/ThemePark.php"

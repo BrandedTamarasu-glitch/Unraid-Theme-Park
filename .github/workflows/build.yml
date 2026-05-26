@@ -1,0 +1,23 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  plugin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check scaffold
+        run: scripts/check-scaffold.sh
+      - name: Prepare release artifacts
+        run: scripts/prepare-release.sh "$(tr -d '[:space:]' < VERSION)"
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: unraid-theme-park-plugin
+          path: |
+            plugin/unraid.theme.park.plg
+            dist/*.txz
+            dist/release-notes-*.md

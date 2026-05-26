@@ -1,0 +1,47 @@
+<!DOCTYPE PLUGIN [
+<!ENTITY name      "unraid.theme.park">
+<!ENTITY author    "BrandedTamarasu-glitch">
+<!ENTITY version   "0.1.0-beta.1">
+<!ENTITY package   "https://github.com/BrandedTamarasu-glitch/Unraid-Theme-Park/releases/download/v0.1.0-beta.1/unraid.theme.park-0.1.0-beta.1-noarch-1.txz">
+<!ENTITY md5       "1610f432a1fbb96f0921cac76466952c">
+]>
+
+<PLUGIN name="&name;"
+        author="&author;"
+        version="&version;"
+        pluginURL="https://raw.githubusercontent.com/BrandedTamarasu-glitch/Unraid-Theme-Park/main/plugin/unraid.theme.park.plg">
+
+<CHANGES>
+## Version &version;
+
+- Initial scaffold for Unraid Theme Park.
+- Adds a Theme Engine-free global stylesheet hook.
+- Adds a minimal settings page and generated active-theme CSS.
+</CHANGES>
+
+<FILE Name="/boot/config/plugins/&name;/&name;-&version;-noarch-1.txz">
+  <URL>&package;</URL>
+  <MD5>&md5;</MD5>
+</FILE>
+
+<FILE Run="/bin/bash">
+<INLINE>
+<![CDATA[
+set -e
+upgradepkg --install-new /boot/config/plugins/unraid.theme.park/unraid.theme.park-&version;-noarch-1.txz
+/usr/local/emhttp/plugins/unraid.theme.park/scripts/apply-theme || true
+]]>
+</INLINE>
+</FILE>
+
+<FILE Run="/bin/bash" Method="remove">
+<INLINE>
+<![CDATA[
+rm -rf /usr/local/emhttp/plugins/unraid.theme.park
+rm -f /boot/config/plugins/unraid.theme.park/unraid.theme.park-*.txz
+rm -f /boot/config/plugins/unraid.theme.park.plg
+]]>
+</INLINE>
+</FILE>
+
+</PLUGIN>
