@@ -28,7 +28,7 @@
 <INLINE>
 <![CDATA[
 set -e
-upgradepkg --install-new /boot/config/plugins/unraid.theme.park/unraid.theme.park-&version;-noarch-1.txz
+upgradepkg --install-new /boot/config/plugins/unraid.theme.park/unraid.theme.park-@VERSION@-noarch-1.txz
 /usr/local/emhttp/plugins/unraid.theme.park/scripts/apply-theme || true
 ]]>
 </INLINE>
