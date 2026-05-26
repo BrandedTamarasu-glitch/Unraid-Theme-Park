@@ -218,13 +218,28 @@ div.frame,
 .ca_topbar,
 .ca_menu,
 .caMenu,
+[id*="ca"],
+[id*="CA"],
+[class*="CA"],
 [class*="ca_"][class*="menu"],
-[class*="ca-"][class*="menu"] {
+[class*="ca-"][class*="menu"],
+[class*="ca_"][class*="bar"],
+[class*="ca-"][class*="bar"],
+[class*="ca_"][class*="header"],
+[class*="ca-"][class*="header"],
+[class*="ca_"][class*="category"],
+[class*="ca-"][class*="category"],
+[class*="ca_"][class*="divider"],
+[class*="ca-"][class*="divider"] {
   color: var(--text) !important;
   background-color: var(--utp-readable-surface-strong) !important;
   border-color: var(--utp-readable-border) !important;
 }
 
+div.tabs,
+div.tabs *,
+div.frame,
+div.frame *,
 #sidenavContent,
 #sidenavContent *,
 .ca_templatesDisplay,
@@ -235,11 +250,76 @@ div.frame,
 .ca_menu *,
 .caMenu,
 .caMenu *,
+[id*="ca"],
+[id*="ca"] *,
+[id*="CA"],
+[id*="CA"] *,
+[class*="CA"],
+[class*="CA"] *,
 [class*="ca_"][class*="menu"],
 [class*="ca_"][class*="menu"] *,
 [class*="ca-"][class*="menu"],
-[class*="ca-"][class*="menu"] * {
+[class*="ca-"][class*="menu"] *,
+[class*="ca_"][class*="bar"],
+[class*="ca_"][class*="bar"] *,
+[class*="ca-"][class*="bar"],
+[class*="ca-"][class*="bar"] *,
+[class*="ca_"][class*="header"],
+[class*="ca_"][class*="header"] *,
+[class*="ca-"][class*="header"],
+[class*="ca-"][class*="header"] *,
+[class*="ca_"][class*="category"],
+[class*="ca_"][class*="category"] *,
+[class*="ca-"][class*="category"],
+[class*="ca-"][class*="category"] *,
+[class*="ca_"][class*="divider"],
+[class*="ca_"][class*="divider"] *,
+[class*="ca-"][class*="divider"],
+[class*="ca-"][class*="divider"] * {
   color: var(--text) !important;
+}
+
+div.tabs > *,
+div.frame > *,
+#sidenavContent > *,
+#sidenavContent li,
+#sidenavContent ul,
+#sidenavContent ol,
+#sidenavContent div,
+#sidenavContent span,
+.ca_templatesDisplay > *,
+.ca_appDetails > *,
+[id*="ca"] > *,
+[id*="CA"] > *,
+[class*="CA"] > * {
+  background-color: transparent !important;
+  border-color: var(--utp-readable-border) !important;
+}
+
+div.tabs,
+div.tabs > ul,
+div.tabs > ol,
+div.tabs > div,
+div.tabs > span,
+div.frame,
+div.frame > ul,
+div.frame > ol,
+div.frame > div,
+div.frame > span,
+#sidenavContent,
+#sidenavContent > ul,
+#sidenavContent > ol,
+#sidenavContent > div,
+#sidenavContent > span,
+.ca_templatesDisplay,
+.ca_templatesDisplay > div,
+.ca_templatesDisplay > nav,
+.ca_appDetails,
+.ca_appDetails > div,
+[id*="ca"],
+[id*="CA"],
+[class*="CA"] {
+  background-color: var(--utp-readable-surface-strong) !important;
 }
 
 div.tabs a,
