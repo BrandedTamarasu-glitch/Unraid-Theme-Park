@@ -33,7 +33,7 @@ Ask testers to include:
 
 ## Release Criteria
 
-- At least one successful install-from-URL report on Unraid `7.3.x`.
+- At least one successful install-from-URL report on Unraid `7.3.x`. Confirmed on Unraid `7.3.0` with `v0.1.0-beta.2`.
 - At least one successful install-from-URL report on latest `7.2.x`.
 - No confirmed blocker for disabling or uninstalling.
 - No supported theme makes primary navigation unreadable.

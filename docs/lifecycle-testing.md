@@ -58,6 +58,13 @@ Run this matrix on a disposable Unraid host before each beta.
 1. Remove the plugin.
 2. Confirm `/usr/local/emhttp/plugins/unraid.theme.park` is gone.
 3. Confirm no theme CSS applies after refresh.
+4. Confirm `/boot/config/plugins/unraid.theme.park/unraid.theme.park.cfg` may remain so user settings survive reinstall.
+
+Validated on Unraid `7.3.0` with the built-in plugin uninstaller:
+
+- `/usr/local/emhttp/plugins/unraid.theme.park` was removed.
+- `/boot/config/plugins/unraid.theme.park/unraid.theme.park.cfg` remained.
+- Retaining the config is intentional unless a future purge option is added.
 
 ## Recovery
 
