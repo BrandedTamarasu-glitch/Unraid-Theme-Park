@@ -15,7 +15,7 @@ THEMES=(
   space-gray:Space\ Gray
 )
 
-mkdir -p "$THEME_DIR/base" "$THEME_DIR/defaults" "$THEME_DIR/options" "$THEME_DIR/compat"
+mkdir -p "$THEME_DIR/base" "$THEME_DIR/defaults" "$THEME_DIR/options" "$THEME_DIR/overrides" "$THEME_DIR/compat"
 
 curl -fsSL "$BASE_URL/base/unraid/unraid-base.css" \
   | sed \
@@ -39,6 +39,7 @@ for entry in "${THEMES[@]}"; do
 /* Generated from Theme Park ${UPSTREAM_REF}. */
 @import url("/plugins/unraid.theme.park/themes/base/unraid-base.css");
 @import url("/plugins/unraid.theme.park/themes/options/${id}.css");
+@import url("/plugins/unraid.theme.park/themes/overrides/${id}.css");
 @import url("/plugins/unraid.theme.park/themes/compat/unraid-7.css");
 CSS
 

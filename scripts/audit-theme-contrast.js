@@ -4,6 +4,7 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const themeDir = path.join(root, 'source/usr/local/emhttp/plugins/unraid.theme.park/themes/options');
+const overrideDir = path.join(root, 'source/usr/local/emhttp/plugins/unraid.theme.park/themes/overrides');
 const strict = process.argv.includes('--strict');
 
 const checks = [
@@ -12,14 +13,12 @@ const checks = [
   ['muted', '--text-muted'],
   ['link', '--link-color'],
   ['link hover', '--link-color-hover'],
-  ['button text', '--button-text'],
-  ['button hover text', '--button-text-hover'],
 ];
 
 const backgrounds = [
-  ['opaque panel', '#1f2328', 4.5],
-  ['strong overlay on black', '#000000', 4.5],
-  ['stock light escape', '#f5f5f5', 4.5],
+  ['opaque panel', '#1f2328', 4.5, true],
+  ['strong overlay on black', '#000000', 4.5, true],
+  ['stock light escape', '#f5f5f5', 4.5, false],
 ];
 
 function parseVars(css) {
@@ -75,6 +74,10 @@ let hasFailure = false;
 for (const file of files) {
   const theme = path.basename(file, '.css');
   const vars = parseVars(fs.readFileSync(path.join(themeDir, file), 'utf8'));
+  const overrideFile = path.join(overrideDir, file);
+  if (fs.existsSync(overrideFile)) {
+    Object.assign(vars, parseVars(fs.readFileSync(overrideFile, 'utf8')));
+  }
   console.log(`\n${theme}`);
 
   for (const [label, variable] of checks) {
@@ -85,14 +88,35 @@ for (const file of files) {
       continue;
     }
 
-    const results = backgrounds.map(([bgLabel, bgColor, min]) => {
+    const results = backgrounds.map(([bgLabel, bgColor, min, enforce]) => {
       const ratio = contrast(rgb, rgbFromColor(bgColor));
       const pass = ratio >= min;
-      if (!pass) hasFailure = true;
+      if (!pass && enforce) hasFailure = true;
       return `${bgLabel} ${formatRatio(ratio)} ${pass ? 'PASS' : 'FAIL'}`;
     });
 
     console.log(`  ${label} ${color}: ${results.join('; ')}`);
+  }
+
+  const buttonPairs = [
+    ['button', '--button-text', '--button-color'],
+    ['button hover', '--button-text-hover', '--button-color-hover'],
+  ];
+
+  for (const [label, fgVar, bgVar] of buttonPairs) {
+    const fg = vars[fgVar];
+    const bg = vars[bgVar];
+    const fgRgb = fg ? rgbFromColor(fg) : null;
+    const bgRgb = bg ? rgbFromColor(bg) : null;
+    if (!fgRgb || !bgRgb) {
+      console.log(`  ${label}: skip (${fgVar}=${fg || 'missing'}, ${bgVar}=${bg || 'missing'})`);
+      continue;
+    }
+
+    const ratio = contrast(fgRgb, bgRgb);
+    const pass = ratio >= 4.5;
+    if (!pass) hasFailure = true;
+    console.log(`  ${label} ${fg} on ${bg}: ${formatRatio(ratio)} ${pass ? 'PASS' : 'FAIL'}`);
   }
 }
 

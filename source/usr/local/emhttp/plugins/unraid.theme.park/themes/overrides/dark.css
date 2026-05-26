@@ -1,0 +1,7 @@
+/* Local per-theme readability overrides. */
+
+:root {
+  --link-color: #b8b8b8;
+  --button-text: #080808;
+  --button-text-hover: #080808;
+}

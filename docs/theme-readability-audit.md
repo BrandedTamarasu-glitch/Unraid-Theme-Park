@@ -13,10 +13,11 @@ Theme wrappers import the Theme Park base CSS, a Theme Park option file, and the
 ```css
 @import url("/plugins/unraid.theme.park/themes/base/unraid-base.css");
 @import url("/plugins/unraid.theme.park/themes/options/<theme>.css");
+@import url("/plugins/unraid.theme.park/themes/overrides/<theme>.css");
 @import url("/plugins/unraid.theme.park/themes/compat/unraid-7.css");
 ```
 
-The theme option files are vendored from Theme Park `1.22.0` by `scripts/sync-themepark-assets.sh`. The local project changes import paths and adds the compatibility layer; it does not rewrite upstream theme variables.
+The theme option files are vendored from Theme Park `1.22.0` by `scripts/sync-themepark-assets.sh`. The local project changes import paths and adds local override layers; it does not rewrite upstream theme option files.
 
 Representative contrast results from `scripts/audit-theme-contrast.js`:
 
@@ -34,6 +35,12 @@ Representative contrast results from `scripts/audit-theme-contrast.js`:
 Fix readability in `themes/compat/unraid-7.css` by making Unraid 7 dashboard, table, and panel surfaces reliably dark before applying the original Theme Park foreground palette.
 
 Do not make each theme's primary text dark. That would diverge from the upstream Theme Park visual intent and would fail on the dark surfaces that the themes expect.
+
+Use `themes/overrides/<theme>.css` for targeted palette fixes when an upstream accent color fails contrast on the dark surfaces the theme expects. Current targeted overrides:
+
+- Dark: brighter link color.
+- Dracula: brighter muted text.
+- Nord: darker hover button text.
 
 ## Validation
 
