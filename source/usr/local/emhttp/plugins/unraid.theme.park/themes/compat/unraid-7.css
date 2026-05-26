@@ -198,3 +198,116 @@ pre {
   color: var(--text) !important;
   background-color: var(--utp-readable-surface-strong) !important;
 }
+
+/* Community Applications uses its own navigation surfaces that can keep the
+ * stock white background on Unraid 7.x. Keep these selectors scoped to CA-ish
+ * containers and controls so the global theme does not over-darken unrelated
+ * plugin pages.
+ */
+div.tabs,
+div.frame,
+.sidenav,
+#sidenavContent,
+.ca_templatesDisplay,
+.ca_appDetails,
+.ca_holder,
+.ca_holderDocker,
+.ca_category,
+.ca_home,
+.ca_sidebar,
+.ca_topbar,
+.ca_menu,
+.caMenu,
+[class*="ca_"][class*="menu"],
+[class*="ca-"][class*="menu"] {
+  color: var(--text) !important;
+  background-color: var(--utp-readable-surface-strong) !important;
+  border-color: var(--utp-readable-border) !important;
+}
+
+#sidenavContent,
+#sidenavContent *,
+.ca_templatesDisplay,
+.ca_templatesDisplay *,
+.ca_appDetails,
+.ca_appDetails *,
+.ca_menu,
+.ca_menu *,
+.caMenu,
+.caMenu *,
+[class*="ca_"][class*="menu"],
+[class*="ca_"][class*="menu"] *,
+[class*="ca-"][class*="menu"],
+[class*="ca-"][class*="menu"] * {
+  color: var(--text) !important;
+}
+
+div.tabs a,
+div.frame a,
+.sidenav a,
+#sidenavContent a,
+.ca_templatesDisplay a,
+.ca_appDetails a,
+.ca_holder a,
+.ca_holderDocker a,
+li.caMenuItem,
+.ca_readmore,
+.card_readmore,
+.homeMore,
+.popUpClose,
+[class*="ca_"][class*="menu"] a,
+[class*="ca-"][class*="menu"] a {
+  color: var(--link-color) !important;
+}
+
+div.tabs a:hover,
+div.tabs a:focus,
+div.frame a:hover,
+div.frame a:focus,
+.sidenav a:hover,
+.sidenav a:focus,
+#sidenavContent a:hover,
+#sidenavContent a:focus,
+.ca_templatesDisplay a:hover,
+.ca_templatesDisplay a:focus,
+.ca_appDetails a:hover,
+.ca_appDetails a:focus,
+.ca_holder a:hover,
+.ca_holder a:focus,
+.ca_holderDocker a:hover,
+.ca_holderDocker a:focus,
+li.caMenuItem:hover,
+.ca_readmore:hover,
+.card_readmore:hover,
+.homeMore:hover,
+.popUpClose:hover,
+[class*="ca_"][class*="menu"] a:hover,
+[class*="ca_"][class*="menu"] a:focus,
+[class*="ca-"][class*="menu"] a:hover,
+[class*="ca-"][class*="menu"] a:focus {
+  color: var(--link-color-hover) !important;
+  background-color: var(--utp-readable-surface) !important;
+}
+
+.selectedMenu,
+.pageSelected,
+.sortIcons.enabledIcon {
+  color: rgb(var(--accent-color)) !important;
+}
+
+.hoverMenu,
+.pageNumber:hover,
+.sortIcons.enabledIcon:hover {
+  color: var(--link-color-hover) !important;
+}
+
+#searchBox,
+.searchSubmit,
+#sidenavContent input,
+#sidenavContent select,
+.ca_templatesDisplay input,
+.ca_templatesDisplay select {
+  color: var(--text) !important;
+  background-color: var(--utp-readable-surface) !important;
+  border-color: var(--utp-readable-border) !important;
+}
