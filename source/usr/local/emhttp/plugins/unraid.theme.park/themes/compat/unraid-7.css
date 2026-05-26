@@ -391,3 +391,90 @@ li.caMenuItem:hover,
   background-color: var(--utp-readable-surface) !important;
   border-color: var(--utp-readable-border) !important;
 }
+
+/* CA's search row and left category menu include anonymous layout wrappers in
+ * current builds. The search input itself can be correct while its parent row
+ * remains stock white, so target wrappers by the controls they contain.
+ */
+form:has(#searchBox),
+div:has(> #searchBox),
+div:has(#searchBox):not(.ca_holder):not(.ca_holderDocker),
+td:has(#searchBox),
+tr:has(#searchBox),
+form:has(.searchSubmit),
+div:has(> .searchSubmit),
+div:has(.searchSubmit):not(.ca_holder):not(.ca_holderDocker),
+td:has(.searchSubmit),
+tr:has(.searchSubmit) {
+  color: var(--text) !important;
+  background: var(--utp-readable-surface-strong) !important;
+  background-color: var(--utp-readable-surface-strong) !important;
+  border-color: var(--utp-readable-border) !important;
+}
+
+/* Category blocks in the Apps sidebar can be plain list/table wrappers without
+ * CA-specific class names. Match the sidebar by the CA menu anchors it contains.
+ */
+div:has(> .caMenuItem),
+div:has(.caMenuItem):not(.ca_holder):not(.ca_holderDocker),
+ul:has(.caMenuItem),
+ol:has(.caMenuItem),
+li:has(.caMenuItem),
+td:has(.caMenuItem),
+tr:has(.caMenuItem),
+table:has(.caMenuItem),
+tbody:has(.caMenuItem),
+div:has(> .selectedMenu),
+div:has(.selectedMenu):not(.ca_holder):not(.ca_holderDocker),
+ul:has(.selectedMenu),
+ol:has(.selectedMenu),
+li:has(.selectedMenu),
+td:has(.selectedMenu),
+tr:has(.selectedMenu),
+table:has(.selectedMenu),
+tbody:has(.selectedMenu),
+div:has(> .hoverMenu),
+div:has(.hoverMenu):not(.ca_holder):not(.ca_holderDocker),
+ul:has(.hoverMenu),
+ol:has(.hoverMenu),
+li:has(.hoverMenu),
+td:has(.hoverMenu),
+tr:has(.hoverMenu),
+table:has(.hoverMenu),
+tbody:has(.hoverMenu) {
+  color: var(--text) !important;
+  background: var(--utp-readable-surface-strong) !important;
+  background-color: var(--utp-readable-surface-strong) !important;
+  border-color: var(--utp-readable-border) !important;
+}
+
+div:has(> .caMenuItem) *,
+div:has(.caMenuItem):not(.ca_holder):not(.ca_holderDocker) *,
+ul:has(.caMenuItem) *,
+ol:has(.caMenuItem) *,
+li:has(.caMenuItem) *,
+td:has(.caMenuItem) *,
+tr:has(.caMenuItem) *,
+table:has(.caMenuItem) *,
+tbody:has(.caMenuItem) *,
+div:has(> .selectedMenu) *,
+div:has(.selectedMenu):not(.ca_holder):not(.ca_holderDocker) *,
+ul:has(.selectedMenu) *,
+ol:has(.selectedMenu) *,
+li:has(.selectedMenu) *,
+td:has(.selectedMenu) *,
+tr:has(.selectedMenu) *,
+table:has(.selectedMenu) *,
+tbody:has(.selectedMenu) *,
+div:has(> .hoverMenu) *,
+div:has(.hoverMenu):not(.ca_holder):not(.ca_holderDocker) *,
+ul:has(.hoverMenu) *,
+ol:has(.hoverMenu) *,
+li:has(.hoverMenu) *,
+td:has(.hoverMenu) *,
+tr:has(.hoverMenu) *,
+table:has(.hoverMenu) *,
+tbody:has(.hoverMenu) * {
+  color: var(--text) !important;
+  border-color: var(--utp-readable-border) !important;
+}
