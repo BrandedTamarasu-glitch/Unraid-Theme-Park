@@ -124,17 +124,27 @@ table.share_status thead td {
 }
 
 table tr:nth-child(even),
+table tr:nth-child(even) td,
+table tr:nth-child(even) th,
 table.tablesorter tbody tr:nth-child(even),
+table.tablesorter tbody tr:nth-child(even) td,
 table.share_status tbody tr:nth-child(even),
-table.disk_status tbody tr:nth-child(even) {
+table.share_status tbody tr:nth-child(even) td,
+table.disk_status tbody tr:nth-child(even),
+table.disk_status tbody tr:nth-child(even) td {
   background: var(--utp-readable-surface) !important;
   background-color: var(--utp-readable-surface) !important;
 }
 
 table tr:nth-child(odd),
+table tr:nth-child(odd) td,
+table tr:nth-child(odd) th,
 table.tablesorter tbody tr:nth-child(odd),
+table.tablesorter tbody tr:nth-child(odd) td,
 table.share_status tbody tr:nth-child(odd),
-table.disk_status tbody tr:nth-child(odd) {
+table.share_status tbody tr:nth-child(odd) td,
+table.disk_status tbody tr:nth-child(odd),
+table.disk_status tbody tr:nth-child(odd) td {
   background: var(--utp-readable-surface-strong) !important;
   background-color: var(--utp-readable-surface-strong) !important;
 }

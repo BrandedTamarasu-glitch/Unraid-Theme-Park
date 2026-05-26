@@ -8,6 +8,8 @@
 :root {
   --utp-local-surface: var(--mild-background-color, #202020);
   --utp-local-surface-strong: var(--dashboard-background-color, var(--mild-background-color, #181818));
+  --utp-local-table-row: var(--table-background-color, var(--utp-local-surface-strong));
+  --utp-local-table-row-alt: var(--mild-background-color, var(--utp-local-surface));
   --utp-local-table-head: var(--table-header-background-color, var(--utp-local-surface-strong));
   --utp-local-input: var(--input-bg-color, var(--utp-local-surface));
   --utp-local-text: var(--text-color, #eeeeee);
@@ -37,6 +39,45 @@ table.share_status thead td {
   background: var(--utp-local-table-head) !important;
   background-color: var(--utp-local-table-head) !important;
   border-color: var(--utp-local-border) !important;
+}
+
+table.disk_status tbody,
+table.disk_status tbody tr,
+table.disk_status tbody td,
+table.share_status tbody,
+table.share_status tbody tr,
+table.share_status tbody td,
+table.tablesorter tbody,
+table.tablesorter tbody tr,
+table.tablesorter tbody td {
+  color: var(--utp-local-text) !important;
+  background: var(--utp-local-table-row) !important;
+  background-color: var(--utp-local-table-row) !important;
+  border-color: var(--utp-local-border) !important;
+}
+
+table.disk_status tbody tr:nth-child(even),
+table.disk_status tbody tr:nth-child(even) td,
+table.share_status tbody tr:nth-child(even),
+table.share_status tbody tr:nth-child(even) td,
+table.tablesorter tbody tr:nth-child(even),
+table.tablesorter tbody tr:nth-child(even) td {
+  background: var(--utp-local-table-row-alt) !important;
+  background-color: var(--utp-local-table-row-alt) !important;
+}
+
+table.disk_status tbody tr[style],
+table.disk_status tbody tr[style] td,
+table.disk_status tbody td[style],
+table.share_status tbody tr[style],
+table.share_status tbody tr[style] td,
+table.share_status tbody td[style],
+table.tablesorter tbody tr[style],
+table.tablesorter tbody tr[style] td,
+table.tablesorter tbody td[style] {
+  color: var(--utp-local-text) !important;
+  background: var(--utp-local-table-row) !important;
+  background-color: var(--utp-local-table-row) !important;
 }
 
 input,
