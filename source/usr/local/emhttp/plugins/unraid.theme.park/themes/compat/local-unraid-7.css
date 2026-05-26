@@ -49,7 +49,19 @@ table.share_status tbody tr,
 table.share_status tbody td,
 table.tablesorter tbody,
 table.tablesorter tbody tr,
-table.tablesorter tbody td {
+table.tablesorter tbody td,
+table.usb_mounts tbody,
+table.usb_mounts tbody tr,
+table.usb_mounts tbody td,
+table.samba_mounts tbody,
+table.samba_mounts tbody tr,
+table.samba_mounts tbody td,
+#disk-table-body,
+#disk-table-body tr,
+#disk-table-body td,
+#remotes-table-body,
+#remotes-table-body tr,
+#remotes-table-body td {
   color: var(--utp-local-text) !important;
   background: var(--utp-local-table-row) !important;
   background-color: var(--utp-local-table-row) !important;
@@ -61,7 +73,15 @@ table.disk_status tbody td,
 table.share_status tbody tr,
 table.share_status tbody td,
 table.tablesorter tbody tr,
-table.tablesorter tbody td {
+table.tablesorter tbody td,
+table.usb_mounts tbody tr,
+table.usb_mounts tbody td,
+table.samba_mounts tbody tr,
+table.samba_mounts tbody td,
+#disk-table-body tr,
+#disk-table-body td,
+#remotes-table-body tr,
+#remotes-table-body td {
   box-shadow: inset 0 0 0 9999px var(--utp-local-table-row) !important;
 }
 
@@ -70,7 +90,15 @@ table.disk_status tbody tr:nth-child(even) td,
 table.share_status tbody tr:nth-child(even),
 table.share_status tbody tr:nth-child(even) td,
 table.tablesorter tbody tr:nth-child(even),
-table.tablesorter tbody tr:nth-child(even) td {
+table.tablesorter tbody tr:nth-child(even) td,
+table.usb_mounts tbody tr:nth-child(even),
+table.usb_mounts tbody tr:nth-child(even) td,
+table.samba_mounts tbody tr:nth-child(even),
+table.samba_mounts tbody tr:nth-child(even) td,
+#disk-table-body tr:nth-child(even),
+#disk-table-body tr:nth-child(even) td,
+#remotes-table-body tr:nth-child(even),
+#remotes-table-body tr:nth-child(even) td {
   background: var(--utp-local-table-row-alt) !important;
   background-color: var(--utp-local-table-row-alt) !important;
   box-shadow: inset 0 0 0 9999px var(--utp-local-table-row-alt) !important;
@@ -84,7 +112,19 @@ table.share_status tbody tr[style] td,
 table.share_status tbody td[style],
 table.tablesorter tbody tr[style],
 table.tablesorter tbody tr[style] td,
-table.tablesorter tbody td[style] {
+table.tablesorter tbody td[style],
+table.usb_mounts tbody tr[style],
+table.usb_mounts tbody tr[style] td,
+table.usb_mounts tbody td[style],
+table.samba_mounts tbody tr[style],
+table.samba_mounts tbody tr[style] td,
+table.samba_mounts tbody td[style],
+#disk-table-body tr[style],
+#disk-table-body tr[style] td,
+#disk-table-body td[style],
+#remotes-table-body tr[style],
+#remotes-table-body tr[style] td,
+#remotes-table-body td[style] {
   color: var(--utp-local-text) !important;
   background: var(--utp-local-table-row) !important;
   background-color: var(--utp-local-table-row) !important;

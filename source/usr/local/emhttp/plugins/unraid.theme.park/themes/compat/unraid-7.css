@@ -131,7 +131,15 @@ table.tablesorter tbody tr:nth-child(even) td,
 table.share_status tbody tr:nth-child(even),
 table.share_status tbody tr:nth-child(even) td,
 table.disk_status tbody tr:nth-child(even),
-table.disk_status tbody tr:nth-child(even) td {
+table.disk_status tbody tr:nth-child(even) td,
+table.usb_mounts tbody tr:nth-child(even),
+table.usb_mounts tbody tr:nth-child(even) td,
+table.samba_mounts tbody tr:nth-child(even),
+table.samba_mounts tbody tr:nth-child(even) td,
+#disk-table-body tr:nth-child(even),
+#disk-table-body tr:nth-child(even) td,
+#remotes-table-body tr:nth-child(even),
+#remotes-table-body tr:nth-child(even) td {
   background: var(--utp-readable-surface) !important;
   background-color: var(--utp-readable-surface) !important;
   box-shadow: inset 0 0 0 9999px var(--utp-readable-surface) !important;
@@ -145,7 +153,15 @@ table.tablesorter tbody tr:nth-child(odd) td,
 table.share_status tbody tr:nth-child(odd),
 table.share_status tbody tr:nth-child(odd) td,
 table.disk_status tbody tr:nth-child(odd),
-table.disk_status tbody tr:nth-child(odd) td {
+table.disk_status tbody tr:nth-child(odd) td,
+table.usb_mounts tbody tr:nth-child(odd),
+table.usb_mounts tbody tr:nth-child(odd) td,
+table.samba_mounts tbody tr:nth-child(odd),
+table.samba_mounts tbody tr:nth-child(odd) td,
+#disk-table-body tr:nth-child(odd),
+#disk-table-body tr:nth-child(odd) td,
+#remotes-table-body tr:nth-child(odd),
+#remotes-table-body tr:nth-child(odd) td {
   background: var(--utp-readable-surface-strong) !important;
   background-color: var(--utp-readable-surface-strong) !important;
   box-shadow: inset 0 0 0 9999px var(--utp-readable-surface-strong) !important;
