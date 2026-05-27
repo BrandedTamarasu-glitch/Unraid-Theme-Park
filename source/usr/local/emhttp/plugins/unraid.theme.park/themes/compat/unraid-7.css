@@ -166,18 +166,14 @@ table.samba_mounts tbody tr:nth-child(odd) td,
   box-shadow: inset 0 0 0 9999px var(--utp-readable-surface-strong) !important;
 }
 
-table.dashboard,
-table.dashboard tbody,
 table.dashboard tr,
 table.dashboard td,
-table.share_status.dashboard,
-table.share_status.dashboard tbody,
 table.share_status.dashboard tr,
 table.share_status.dashboard td,
-[id^="db-box"],
-[id^="db-box"] tbody,
 [id^="db-box"] tr,
-[id^="db-box"] td {
+[id^="db-box"] td,
+[id^="db_box"] tr,
+[id^="db_box"] td {
   background: var(--utp-readable-surface-strong) !important;
   background-color: var(--utp-readable-surface-strong) !important;
   color: var(--text) !important;
@@ -191,17 +187,32 @@ table.share_status.dashboard thead,
 table.share_status.dashboard thead td,
 [id^="db-box"] th,
 [id^="db-box"] thead,
-[id^="db-box"] thead td {
+[id^="db-box"] thead td,
+[id^="db_box"] th,
+[id^="db_box"] thead,
+[id^="db_box"] thead td {
   color: var(--text-hover) !important;
 }
 
-/* Empty Dashboard layout columns should stay invisible. Only actual widget
- * content should get the themed card/surface treatment.
+/* Dashboard layout containers should stay invisible. Only actual widget
+ * rows/cells should get the themed card/surface treatment.
  */
+table.dashboard,
+table.dashboard > tbody,
+table.share_status.dashboard,
+table.share_status.dashboard > tbody,
+[id^="db-box"],
+[id^="db-box"] > tbody,
+[id^="db_box"],
+[id^="db_box"] > tbody,
 [id^="db-box"]:empty,
 [id^="db-box"] tbody:empty,
 [id^="db-box"] tr:empty,
 [id^="db-box"] td:empty,
+[id^="db_box"]:empty,
+[id^="db_box"] tbody:empty,
+[id^="db_box"] tr:empty,
+[id^="db_box"] td:empty,
 .dashboard:empty,
 .dashboard-widget:empty,
 .widget:empty,

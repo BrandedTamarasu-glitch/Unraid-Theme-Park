@@ -152,13 +152,25 @@ textarea::placeholder {
   opacity: 1;
 }
 
-/* Empty Dashboard layout columns should stay invisible. Only actual widget
+/* Dashboard layout containers should stay invisible. Only actual widget
  * content should get the themed card/surface treatment.
  */
+table.dashboard,
+table.dashboard > tbody,
+table.share_status.dashboard,
+table.share_status.dashboard > tbody,
+[id^="db-box"],
+[id^="db-box"] > tbody,
+[id^="db_box"],
+[id^="db_box"] > tbody,
 [id^="db-box"]:empty,
 [id^="db-box"] tbody:empty,
 [id^="db-box"] tr:empty,
 [id^="db-box"] td:empty,
+[id^="db_box"]:empty,
+[id^="db_box"] tbody:empty,
+[id^="db_box"] tr:empty,
+[id^="db_box"] td:empty,
 .dashboard:empty,
 .dashboard-widget:empty,
 .widget:empty,
