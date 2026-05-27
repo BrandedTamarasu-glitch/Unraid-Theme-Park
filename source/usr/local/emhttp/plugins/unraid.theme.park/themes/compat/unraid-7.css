@@ -77,7 +77,6 @@ table.tablesorter,
 .panel,
 .dashboard,
 .dash,
-.tile,
 .card,
 .plugin,
 .info,
@@ -208,6 +207,13 @@ table.share_status.dashboard thead td,
 .widget:empty,
 [class*="dashboard"][class*="column" i]:empty,
 [class*="dashboard"][class*="column" i]:not(:has(.widget, .dashboard-widget, table, canvas, svg, img, button, a, input, select, textarea)) {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.tile {
   background: transparent !important;
   background-color: transparent !important;
   border-color: transparent !important;
