@@ -31,16 +31,16 @@ Theme Park was created by gilbN with contributions from the Theme Park community
 
 | Theme Park option | Plugin status | Notes |
 | --- | --- | --- |
-| Aquamarine | Supported | Included in the `v0.1.2` community test baseline. |
-| Dark | Supported | Included in the `v0.1.2` community test baseline. |
-| Dracula | Supported | Included in the `v0.1.2` community test baseline. |
-| Hotpink | Supported | Included in the `v0.1.2` community test baseline. |
-| Nord | Supported | Included in the `v0.1.2` community test baseline. |
-| Space Gray | Supported | Included in the `v0.1.2` community test baseline. |
-| Hotline | Supported | Imported from Theme Park `1.22.0`; included in the `v0.1.2` community test baseline. |
-| Organizr | Supported | Imported from Theme Park `1.22.0`; included in the `v0.1.2` community test baseline. |
-| Overseerr | Supported | Imported from Theme Park `1.22.0`; included in the `v0.1.2` community test baseline. |
-| Maroon | Supported | Imported from Theme Park `1.22.0`; included in the `v0.1.2` community test baseline. |
+| Aquamarine | Supported | Included in the `v0.1.7` community test baseline. |
+| Dark | Supported | Included in the `v0.1.7` community test baseline. |
+| Dracula | Supported | Included in the `v0.1.7` community test baseline. |
+| Hotpink | Supported | Included in the `v0.1.7` community test baseline. |
+| Nord | Supported | Included in the `v0.1.7` community test baseline. |
+| Space Gray | Supported | Included in the `v0.1.7` community test baseline. |
+| Hotline | Supported | Imported from Theme Park `1.22.0`; included in the `v0.1.7` community test baseline. |
+| Organizr | Supported | Imported from Theme Park `1.22.0`; included in the `v0.1.7` community test baseline. |
+| Overseerr | Supported | Imported from Theme Park `1.22.0`; included in the `v0.1.7` community test baseline. |
+| Maroon | Supported | Imported from Theme Park `1.22.0`; included in the `v0.1.7` community test baseline. |
 | Plex | Deferred | Upstream references `/resources/...`; needs local asset packaging before support. |
 
 ## Local Theme Coverage
@@ -49,10 +49,10 @@ The plugin also bundles standalone Unraid themes from BrandedTamarasu-glitch rep
 
 | Theme | Source | Notes |
 | --- | --- | --- |
-| Crema | `BrandedTamarasu-glitch/Ground_Control@da92af7749e7dd18cf42a6b115d56b22201324d3` | Light Ground Control theme; included in the `v0.1.2` community test baseline. |
-| Meridian | `BrandedTamarasu-glitch/unraid-meridian@9a3f3fb5a923e570d8a2076fb3070cad05eb20e2` | Dark Meridian theme; included in the `v0.1.2` community test baseline. |
-| Meridian Light | `BrandedTamarasu-glitch/unraid-meridian@9a3f3fb5a923e570d8a2076fb3070cad05eb20e2` | Light Meridian theme; included in the `v0.1.2` community test baseline. |
-| Ristretto | `BrandedTamarasu-glitch/Ground_Control@da92af7749e7dd18cf42a6b115d56b22201324d3` | Dark Ground Control theme; included in the `v0.1.2` community test baseline. |
+| Crema | `BrandedTamarasu-glitch/Ground_Control@da92af7749e7dd18cf42a6b115d56b22201324d3` | Light Ground Control theme; included in the `v0.1.7` community test baseline. |
+| Meridian | `BrandedTamarasu-glitch/unraid-meridian@9a3f3fb5a923e570d8a2076fb3070cad05eb20e2` | Dark Meridian theme; included in the `v0.1.7` community test baseline. |
+| Meridian Light | `BrandedTamarasu-glitch/unraid-meridian@9a3f3fb5a923e570d8a2076fb3070cad05eb20e2` | Light Meridian theme; included in the `v0.1.7` community test baseline. |
+| Ristretto | `BrandedTamarasu-glitch/Ground_Control@da92af7749e7dd18cf42a6b115d56b22201324d3` | Dark Ground Control theme; included in the `v0.1.7` community test baseline. |
 
 ## Parity Plan
 

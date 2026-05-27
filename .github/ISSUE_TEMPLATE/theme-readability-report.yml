@@ -24,7 +24,7 @@ body:
     attributes:
       label: Unraid Theme Park version
       description: Use the version shown in Plugins or the installed package name.
-      placeholder: 0.1.2
+      placeholder: 0.1.7
     validations:
       required: true
 

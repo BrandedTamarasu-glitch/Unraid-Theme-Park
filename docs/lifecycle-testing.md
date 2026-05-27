@@ -4,7 +4,7 @@ Run this matrix on a disposable Unraid host before each community test release.
 
 ## Environment
 
-- Unraid `7.3.0`, validated manually with `v0.1.2`.
+- Unraid `7.3.0`, validated manually with `v0.1.7`.
 - Add latest `7.2.x` before wider beta.
 - Chromium browser.
 - Firefox browser.
@@ -75,7 +75,7 @@ Validated on Unraid `7.3.0` with the built-in plugin uninstaller:
 
 ## Validation Log
 
-### Unraid 7.3.0, `v0.1.2`
+### Unraid 7.3.0, `v0.1.7`
 
 Manual validation passed:
 

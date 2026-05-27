@@ -1,0 +1,92 @@
+name: Install or update problem
+description: Report plugin install, update, enable, disable, reboot persistence, or uninstall problems.
+title: "[Install]: "
+labels:
+  - install
+  - community-test
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for install/update lifecycle issues. For unreadable text or white boxes, use the Theme readability report instead.
+
+  - type: input
+    id: unraid-version
+    attributes:
+      label: Unraid version
+      description: Run `cat /etc/unraid-version` if unsure.
+      placeholder: 7.3.0
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Unraid Theme Park version
+      description: Use the version shown in Plugins or the installed package name.
+      placeholder: 0.1.7
+    validations:
+      required: true
+
+  - type: dropdown
+    id: action
+    attributes:
+      label: What were you doing?
+      options:
+        - First install
+        - Update existing install
+        - Enable theme
+        - Switch theme
+        - Disable theme
+        - Reboot persistence check
+        - Uninstall
+        - Reinstall after uninstall
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: input
+    id: install-method
+    attributes:
+      label: Install method
+      placeholder: Plugins > Install Plugin URL, shell plugin install URL, local txz test
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: The plugin should install, then Theme Settings should appear under Settings.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      placeholder: Paste the exact error or describe what happened.
+    validations:
+      required: true
+
+  - type: textarea
+    id: command-output
+    attributes:
+      label: Command output
+      description: Paste relevant install/update output if available.
+      render: shell
+      placeholder: |
+        plugin install https://raw.githubusercontent.com/BrandedTamarasu-glitch/Unraid-Theme-Park/main/plugin/unraid.theme.park.plg
+        grep -E 'version|release/download|upgradepkg' /boot/config/plugins/unraid.theme.park.plg 2>/dev/null
+        cat /boot/config/plugins/unraid.theme.park/unraid.theme.park.cfg 2>/dev/null
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Attach screenshots if the problem is visible in the WebGUI.
+      placeholder: Drag screenshots here.
+    validations:
+      required: false

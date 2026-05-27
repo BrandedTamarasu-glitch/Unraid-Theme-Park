@@ -24,7 +24,7 @@
 
 ## 5. Community Beta
 
-- Use `v0.1.2` as the current community test baseline for Unraid `7.3.0`.
+- Use `v0.1.7` as the current community test baseline for Unraid `7.3.0`.
 - Validate beta on latest Unraid `7.2.x`.
 - Collect screenshots and environment details.
 - Keep Plex deferred until its resource assets are packaged locally.

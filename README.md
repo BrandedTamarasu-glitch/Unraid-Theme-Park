@@ -4,7 +4,7 @@ Theme Park-style themes for Unraid 7.2+ without the deprecated Theme Engine plug
 
 ## Status
 
-Unraid Theme Park is in public beta. `v0.1.2` is the current community test baseline and is manually validated on Unraid `7.3.0`.
+Unraid Theme Park is in public beta. `v0.1.7` is the current community test baseline and is manually validated on Unraid `7.3.0`.
 
 Validated so far:
 
@@ -77,7 +77,7 @@ Additional local Unraid themes are bundled from BrandedTamarasu-glitch repositor
 
 Validated:
 
-- Unraid `7.3.0` with `v0.1.2`, including Community Applications and Unassigned Devices spot checks.
+- Unraid `7.3.0` with `v0.1.7`, including Community Applications, Unassigned Devices, notifications, and Dashboard spot checks.
 
 Targeted but not fully validated yet:
 
@@ -111,6 +111,15 @@ Plugin URL:
 ```text
 https://raw.githubusercontent.com/BrandedTamarasu-glitch/Unraid-Theme-Park/main/plugin/unraid.theme.park.plg
 ```
+
+## Reporting Issues
+
+Please use GitHub issues for confirmed bugs:
+
+- **Theme readability report** for unreadable text, white boxes, low contrast, or third-party plugin page styling drift.
+- **Install or update problem** for install, update, enable, disable, reboot persistence, uninstall, or reinstall problems.
+
+Include the Unraid version, Unraid Theme Park version, selected theme, browser, affected page, and a screenshot. More detail is in [Reporting issues](docs/reporting-issues.md).
 
 ## Manual Test Install
 
@@ -169,6 +178,7 @@ It does not publish a GitHub release. Follow [Release Process](docs/release-proc
 - [Theme hardening](docs/theme-hardening.md)
 - [Theme parity](docs/theme-parity.md)
 - [Community beta plan](docs/community-beta.md)
+- [Reporting issues](docs/reporting-issues.md)
 - [Phase 0 validation](docs/phase-0-validation.md)
 - [Known issues](KNOWN_ISSUES.md)
 

@@ -1,6 +1,6 @@
 # Known Issues
 
-This file tracks the current support boundary for the `v0.1.2` community test baseline.
+This file tracks the current support boundary for the `v0.1.7` community test baseline.
 
 ## Deferred Themes
 
@@ -9,12 +9,12 @@ This file tracks the current support boundary for the `v0.1.2` community test ba
 
 ## Versioning
 
-- Installable Unraid plugin versions should use plain numeric values such as `0.1.2`.
+- Installable Unraid plugin versions should use plain numeric values such as `0.1.7`.
 - Avoid prerelease suffixes such as `-beta.10` in `plugin/unraid.theme.park.plg`; Unraid can compare those suffixes unexpectedly and reject a newer build as older.
 
 ## Unraid Versions
 
-- `v0.1.2` is manually validated on Unraid `7.3.0`.
+- `v0.1.7` is manually validated on Unraid `7.3.0`.
 - Latest Unraid `7.2.x` still needs a community validation report.
 - Later Unraid `7.x` releases may require selector updates if the WebGUI markup changes.
 
@@ -33,6 +33,9 @@ Other third-party plugins may still render stock light surfaces or low-contrast 
 - browser
 - affected page or plugin
 - screenshot
+
+Use the GitHub issue templates when possible. The reporting checklist lives in
+[Reporting issues](docs/reporting-issues.md).
 
 ## Browser Cache
 
