@@ -152,6 +152,24 @@ textarea::placeholder {
   opacity: 1;
 }
 
+/* Empty Dashboard layout columns should stay invisible. Only actual widget
+ * content should get the themed card/surface treatment.
+ */
+[id^="db-box"]:empty,
+[id^="db-box"] tbody:empty,
+[id^="db-box"] tr:empty,
+[id^="db-box"] td:empty,
+.dashboard:empty,
+.dashboard-widget:empty,
+.widget:empty,
+[class*="dashboard"][class*="column" i]:empty,
+[class*="dashboard"][class*="column" i]:not(:has(.widget, .dashboard-widget, table, canvas, svg, img, button, a, input, select, textarea)) {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
 /* Unraid 7 notifications use a newer drawer layout that can keep stock white
  * Tailwind-style surfaces while inheriting theme-light text.
  */
