@@ -152,6 +152,48 @@ textarea::placeholder {
   opacity: 1;
 }
 
+/* Unraid 7 notifications use a newer drawer layout that can keep stock white
+ * Tailwind-style surfaces while inheriting theme-light text.
+ */
+#notifications,
+#notifications *,
+[id*="notification" i],
+[id*="notification" i] *,
+[class*="notification" i],
+[class*="notification" i] *,
+body > .fixed.right-0,
+body > .fixed.right-0 * {
+  color: var(--utp-local-text) !important;
+  border-color: var(--utp-local-border) !important;
+}
+
+#notifications,
+[id*="notification" i],
+[class*="notification" i],
+body > .fixed.right-0,
+body > .fixed.right-0 .bg-white,
+body > .fixed.right-0 [class*="bg-gray" i],
+body > .fixed.right-0 [class*="bg-slate" i],
+body > .fixed.right-0 [class*="bg-zinc" i] {
+  background: var(--utp-local-surface-strong) !important;
+  background-color: var(--utp-local-surface-strong) !important;
+}
+
+body > .fixed.right-0 button,
+body > .fixed.right-0 [role="tab"],
+body > .fixed.right-0 [role="button"],
+[id*="notification" i] button,
+[class*="notification" i] button {
+  border-color: var(--utp-local-border) !important;
+}
+
+body > .fixed.right-0 a,
+#notifications a,
+[id*="notification" i] a,
+[class*="notification" i] a {
+  color: var(--utp-local-link) !important;
+}
+
 div.tabs,
 div.frame,
 .sidenav,
