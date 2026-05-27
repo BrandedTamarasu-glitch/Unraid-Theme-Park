@@ -239,7 +239,17 @@ textarea::placeholder {
 [class*="notification" i],
 [class*="notification" i] *,
 body > .fixed.right-0,
-body > .fixed.right-0 * {
+body > .fixed.right-0 *,
+[role="dialog"],
+[role="dialog"] *,
+[aria-modal="true"],
+[aria-modal="true"] *,
+[class*="drawer" i],
+[class*="drawer" i] *,
+[class*="slide-over" i],
+[class*="slide-over" i] *,
+[style*="position: fixed"][style*="right"],
+[style*="position: fixed"][style*="right"] * {
   color: var(--text) !important;
   border-color: var(--utp-readable-border) !important;
 }
@@ -251,7 +261,28 @@ body > .fixed.right-0,
 body > .fixed.right-0 .bg-white,
 body > .fixed.right-0 [class*="bg-gray" i],
 body > .fixed.right-0 [class*="bg-slate" i],
-body > .fixed.right-0 [class*="bg-zinc" i] {
+body > .fixed.right-0 [class*="bg-zinc" i],
+[role="dialog"],
+[aria-modal="true"],
+[class*="drawer" i],
+[class*="slide-over" i],
+[style*="position: fixed"][style*="right"],
+[role="dialog"] .bg-white,
+[role="dialog"] [class*="bg-gray" i],
+[role="dialog"] [class*="bg-slate" i],
+[role="dialog"] [class*="bg-zinc" i],
+[aria-modal="true"] .bg-white,
+[aria-modal="true"] [class*="bg-gray" i],
+[aria-modal="true"] [class*="bg-slate" i],
+[aria-modal="true"] [class*="bg-zinc" i],
+[class*="drawer" i] .bg-white,
+[class*="drawer" i] [class*="bg-gray" i],
+[class*="drawer" i] [class*="bg-slate" i],
+[class*="drawer" i] [class*="bg-zinc" i],
+[class*="slide-over" i] .bg-white,
+[class*="slide-over" i] [class*="bg-gray" i],
+[class*="slide-over" i] [class*="bg-slate" i],
+[class*="slide-over" i] [class*="bg-zinc" i] {
   background: var(--utp-readable-surface-strong) !important;
   background-color: var(--utp-readable-surface-strong) !important;
 }
@@ -259,12 +290,22 @@ body > .fixed.right-0 [class*="bg-zinc" i] {
 body > .fixed.right-0 button,
 body > .fixed.right-0 [role="tab"],
 body > .fixed.right-0 [role="button"],
+[role="dialog"] button,
+[role="dialog"] [role="tab"],
+[role="dialog"] [role="button"],
+[aria-modal="true"] button,
+[aria-modal="true"] [role="tab"],
+[aria-modal="true"] [role="button"],
 [id*="notification" i] button,
 [class*="notification" i] button {
   border-color: var(--utp-readable-border) !important;
 }
 
 body > .fixed.right-0 a,
+[role="dialog"] a,
+[aria-modal="true"] a,
+[class*="drawer" i] a,
+[class*="slide-over" i] a,
 #notifications a,
 [id*="notification" i] a,
 [class*="notification" i] a {
